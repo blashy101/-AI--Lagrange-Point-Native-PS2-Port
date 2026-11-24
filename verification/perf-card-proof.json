@@ -1,0 +1,25 @@
+{
+  "EN0.DAT": {
+    "bytes": 1376,
+    "sha256": "6f8abbc0b449730052208ea3c1496f177f018c9c0cc31191cdc6c23b5bd5bfef",
+    "header_hex": "4c503243415244310000000002000000400500006c24176a0000000000000000",
+    "sequence": 2,
+    "crc32_valid": true
+  },
+  "EN1.DAT": {
+    "bytes": 1376,
+    "sha256": "ca9895c7fa319cc58060c4f9a67ca60fdb980abd9b2ae62e32201de7ca2f1251",
+    "header_hex": "4c503243415244310000000001000000400500009e7d82050000000000000000",
+    "sequence": 1,
+    "crc32_valid": true
+  },
+  "JA1.DAT": {
+    "bytes": 1376,
+    "sha256": "0953ee9199b051762f4446e2c907627c7cb19cf9412ce9aa3fa0326d271ae241",
+    "header_hex": "4c503243415244310100000001000000400500000629dcde0000000000000000",
+    "sequence": 1,
+    "crc32_valid": true
+  },
+  "both_languages_previous_records_unchanged": true,
+  "native_write_and_cold_load_passed": true
+}

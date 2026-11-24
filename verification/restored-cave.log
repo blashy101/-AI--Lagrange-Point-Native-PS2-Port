@@ -1,0 +1,8 @@
+[    7.4362] LP_SIMD all palette modes and canaries passed
+[    9.4439] LP_START signal=2 map=216
+[   11.4428] LP_TIMING tick=120 frames=120 presents=120 wide=120 offered=95837 accepted=95837
+[   13.4424] LP_TIMING tick=240 frames=240 presents=240 wide=240 offered=191673 accepted=191673
+[   15.4423] LP_TIMING tick=360 frames=360 presents=360 wide=360 offered=287510 accepted=287510
+[   17.4429] LP_TIMING tick=480 frames=480 presents=480 wide=480 offered=383346 accepted=383346
+[   19.4427] LP_TIMING tick=600 frames=600 presents=600 wide=600 offered=479183 accepted=479183
+[   21.4425] LP_TIMING tick=720 frames=720 presents=720 wide=720 offered=575019 accepted=575019

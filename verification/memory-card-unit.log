@@ -1,0 +1,32 @@
+mkdir -p build
+cc -Wall -Wextra -Werror -std=c11 -Isrc tests/save_data.c src/save_data.c -o build/save-data-test
+build/save-data-test
+cc -Wall -Wextra -Werror -std=c11 -pthread -Itests/card_mock -Isrc tests/memory_card.c tests/card_mock/runtime.c src/memory_card.c src/save_data.c tests/card_mock/assets.S -o build/memory-card-test
+python3 tests/test_memory_card.py
+{
+  "passed": true,
+  "checks": [
+    "empty 0 0: MEMORY CARD READY",
+    "save 0 1: SAVED TO MEMORY CARD",
+    "load 0 1: MEMORY CARD SAVE LOADED",
+    "empty 1 0: MEMORY CARD READY",
+    "save 1 7: SAVED TO MEMORY CARD",
+    "load 0 1: MEMORY CARD SAVE LOADED",
+    "load 1 7: MEMORY CARD SAVE LOADED",
+    "save 0 2: SAVED TO MEMORY CARD",
+    "load 0 2: MEMORY CARD SAVE LOADED",
+    "save 0 3: MEMORY CARD READ OR WRITE FAILED",
+    "load 0 2: BACKUP SAVE LOADED",
+    "save 0 4: SAVED TO MEMORY CARD",
+    "load 0 4: MEMORY CARD SAVE LOADED",
+    "load 0 2: BACKUP SAVE LOADED",
+    "save 0 5: NO MEMORY CARD IN SLOT 1",
+    "save 0 5: MEMORY CARD NEEDS FORMATTING",
+    "save 0 5: MEMORY CARD IS FULL",
+    "load 0 2: BACKUP SAVE LOADED",
+    "load 1 7: MEMORY CARD SAVE LOADED",
+    "two 0 8: SAVED TO MEMORY CARD",
+    "load 0 9: MEMORY CARD SAVE LOADED",
+    "load 1 7: MEMORY CARD SAVE LOADED"
+  ]
+}

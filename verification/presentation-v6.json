@@ -1,0 +1,217 @@
+{
+  "changes": [
+    "Rebuild top and bottom field scrolling rows from bounded map data.",
+    "Render exposed NPC tiles using full vertical coordinates to remove Y-wrap fragments.",
+    "Add global volume settings 0, +3, +6, +9 and +12 dB. Default is +6 dB.",
+    "Apply common stereo peak protection with smooth gain recovery."
+  ],
+  "elf_sha256": "6114af3ae8c800d80f6ac663c482e973d29e4816bdfc8b3800553bfb112e6b11",
+  "iso_sha256": "f658128ab4575b5938dc1b5914cb80f80db5a8088958a08d94d364be19d12037",
+  "iso_executable_matches_elf": true,
+  "checks": [
+    "check-display",
+    "check-timing",
+    "check-audio",
+    "check-wide"
+  ],
+  "source_map_edge_check": {
+    "frames": 96,
+    "previous_invalid_pixels": 113083,
+    "new_invalid_pixels": 0,
+    "first_frame": 28128,
+    "last_frame": 28318,
+    "method": "Above the map, every 16-pixel border repetition must match the bounded map material."
+  },
+  "removed_wrapped_npc_pixels": 74,
+  "wrapped_npc_pixels_after": 0,
+  "previous_widescreen_npc_check": [
+    {
+      "frame": 26829,
+      "wide_face_pixels": 31
+    },
+    {
+      "frame": 26835,
+      "wide_face_pixels": 31
+    },
+    {
+      "frame": 26843,
+      "wide_face_pixels": 31
+    },
+    {
+      "frame": 26859,
+      "wide_face_pixels": 31
+    }
+  ],
+  "original_replay_outputs_match": true,
+  "native_replay_frames": {
+    "english": 36000,
+    "japanese": 228682
+  },
+  "frontend_audio": {
+    "opening": {
+      "previous_rms": 1718.9,
+      "new_rms": 3437.1,
+      "gain_db": 6.02
+    },
+    "quiet": {
+      "previous_rms": 1437.5,
+      "new_rms": 2867.6,
+      "gain_db": 6.0
+    },
+    "returning": {
+      "previous_rms": 2030.1,
+      "new_rms": 4074.9,
+      "gain_db": 6.05
+    },
+    "gameplay_music": {
+      "previous_rms": 3134.1,
+      "new_rms": 6178.6,
+      "gain_db": 5.9
+    },
+    "additional_clipped_samples": 0,
+    "original_setting_bit_exact": true
+  },
+  "pcsx2_output_audio": {
+    "bounds720-original-pcsx": {
+      "onset_sample": 346444,
+      "frames": 951360,
+      "rms": 686.54,
+      "peak": 0.8035375475883484,
+      "clipped_samples": 0
+    },
+    "bounds720-pcsx": {
+      "onset_sample": 352645,
+      "frames": 941760,
+      "rms": 1377.12,
+      "peak": 0.8034462928771973,
+      "clipped_samples": 0
+    },
+    "gain_db": 6.05
+  },
+  "pcsx2": {
+    "version": "2.8.2",
+    "renderer": "OpenGL 1x",
+    "bios": "OpenPS2BIOS 0.6 with PS2SDK SIO2MAN and PADMAN for the test profile",
+    "timing": {
+      "bounds480-pcsx": {
+        "ticks": [
+          {
+            "tick": 120,
+            "frames": 117,
+            "presents": 117,
+            "wide": 117,
+            "offered": 93441,
+            "accepted": 91843,
+            "hash": 1
+          },
+          {
+            "tick": 240,
+            "frames": 236,
+            "presents": 236,
+            "wide": 236,
+            "offered": 188479,
+            "accepted": 186881
+          },
+          {
+            "tick": 360,
+            "frames": 356,
+            "presents": 356,
+            "wide": 356,
+            "offered": 284315,
+            "accepted": 282717,
+            "hash": 9127
+          },
+          {
+            "tick": 480,
+            "frames": 475,
+            "presents": 475,
+            "wide": 475,
+            "offered": 379353,
+            "accepted": 377755
+          },
+          {
+            "tick": 600,
+            "frames": 594,
+            "presents": 594,
+            "wide": 594,
+            "offered": 474391,
+            "accepted": 471195,
+            "hash": 31
+          },
+          {
+            "tick": 720,
+            "frames": 714,
+            "presents": 714,
+            "wide": 714,
+            "offered": 570227,
+            "accepted": 567031
+          }
+        ],
+        "nominal_refresh_hz": 59.94,
+        "measured_presentations_hz": 59.44
+      },
+      "bounds720-pcsx": {
+        "ticks": [
+          {
+            "tick": 120,
+            "frames": 117,
+            "presents": 117,
+            "wide": 117,
+            "offered": 93441,
+            "accepted": 91844,
+            "hash": 1
+          },
+          {
+            "tick": 240,
+            "frames": 236,
+            "presents": 236,
+            "wide": 236,
+            "offered": 188479,
+            "accepted": 186882
+          },
+          {
+            "tick": 360,
+            "frames": 355,
+            "presents": 355,
+            "wide": 355,
+            "offered": 283516,
+            "accepted": 281919
+          },
+          {
+            "tick": 480,
+            "frames": 474,
+            "presents": 474,
+            "wide": 474,
+            "offered": 378554,
+            "accepted": 376957
+          },
+          {
+            "tick": 600,
+            "frames": 594,
+            "presents": 594,
+            "wide": 594,
+            "offered": 474391,
+            "accepted": 471196,
+            "hash": 31
+          },
+          {
+            "tick": 720,
+            "frames": 713,
+            "presents": 713,
+            "wide": 713,
+            "offered": 569429,
+            "accepted": 566234
+          }
+        ],
+        "nominal_refresh_hz": 59.94,
+        "measured_presentations_hz": 59.36
+      }
+    },
+    "normal_boot_checks": [
+      "English title at 480i",
+      "Japanese title at 720p",
+      "Volume default +6 dB, changed to +9 dB and back through the menu"
+    ]
+  },
+  "physical_ps2_verified": false
+}

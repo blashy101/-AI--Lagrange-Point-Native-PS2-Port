@@ -1,0 +1,907 @@
+{
+  "emulator": "PCSX2 2.8.2 on Linux with OpenGL at 1\u00d7",
+  "core": "Released version 3",
+  "controller_input": "stage17_battle_inputs.json",
+  "controller_input_sha256": "95debfa9439a7ca0bf662074dc22cf670bdd2283b7aefe03cfb0e04b85246a6b",
+  "test_setup": "The instrumented frontend restores an English checkpoint at frame 31000. It applies the rest of the original inputs through frame 35400. The 720p run selects the mode through the normal display menu code. The probes keep audio enabled on the guest and route host output to Null.",
+  "results": "The replay followed tunnel movement, the Queso and Rubberman encounter and the return to the tunnel.",
+  "checks_match_uninterrupted_host_replay": [
+    {
+      "frame": "31000",
+      "mode": "04",
+      "ram": "fb19a94e",
+      "sram": "66b8ec29"
+    },
+    {
+      "frame": "31166",
+      "mode": "04",
+      "ram": "693a973d",
+      "sram": "33236747"
+    },
+    {
+      "frame": "31400",
+      "mode": "04",
+      "ram": "8fb1396f",
+      "sram": "00833092"
+    },
+    {
+      "frame": "31694",
+      "mode": "09",
+      "ram": "c4a1a0f9",
+      "sram": "c49677ba"
+    },
+    {
+      "frame": "32150",
+      "mode": "0a",
+      "ram": "66d46d65",
+      "sram": "88550315"
+    },
+    {
+      "frame": "33000",
+      "mode": "0a",
+      "ram": "70759ad4",
+      "sram": "2242a270"
+    },
+    {
+      "frame": "34000",
+      "mode": "0a",
+      "ram": "6c00a401",
+      "sram": "2f52cf7e"
+    },
+    {
+      "frame": "34578",
+      "mode": "04",
+      "ram": "5ba684e2",
+      "sram": "c74df7c9"
+    },
+    {
+      "frame": "35015",
+      "mode": "04",
+      "ram": "712cc7b1",
+      "sram": "f9a68339"
+    },
+    {
+      "frame": "35400",
+      "mode": "04",
+      "ram": "c2781f68",
+      "sram": "1c950c7f"
+    }
+  ],
+  "metrics": {
+    "480i": {
+      "refresh_hz": 59.94,
+      "timing": {
+        "windows": 35,
+        "refreshes": 4200,
+        "updates": 4200,
+        "presentations": 4200,
+        "fps": 59.94,
+        "worst_window_fps": 59.94,
+        "mean_core_cycles": 4612484,
+        "peak_core_cycles": 5360665
+      },
+      "phases": {
+        "tunnel_movement": {
+          "windows": 3,
+          "refreshes": 360,
+          "updates": 360,
+          "presentations": 360,
+          "fps": 59.94,
+          "worst_window_fps": 59.94,
+          "mean_core_cycles": 4781689,
+          "peak_core_cycles": 5215055
+        },
+        "battle_entry": {
+          "windows": 3,
+          "refreshes": 360,
+          "updates": 360,
+          "presentations": 360,
+          "fps": 59.94,
+          "worst_window_fps": 59.94,
+          "mean_core_cycles": 4503622,
+          "peak_core_cycles": 5360665
+        },
+        "auto_combat_and_reward": {
+          "windows": 19,
+          "refreshes": 2280,
+          "updates": 2280,
+          "presentations": 2280,
+          "fps": 59.94,
+          "worst_window_fps": 59.94,
+          "mean_core_cycles": 4605794,
+          "peak_core_cycles": 5316989
+        },
+        "return_to_tunnel": {
+          "windows": 6,
+          "refreshes": 720,
+          "updates": 720,
+          "presentations": 720,
+          "fps": 59.94,
+          "worst_window_fps": 59.94,
+          "mean_core_cycles": 4681305,
+          "peak_core_cycles": 5227469
+        }
+      },
+      "startup_window": {
+        "start": 31000,
+        "steps": 119,
+        "presents": 118,
+        "fields": 120,
+        "core": 4647098,
+        "peak": 5144976,
+        "waited": 18,
+        "late_flips": 0
+      },
+      "windows_after_startup": [
+        {
+          "start": 31119,
+          "steps": 120,
+          "presents": 120,
+          "fields": 120,
+          "core": 4238351,
+          "peak": 5027480,
+          "waited": 112,
+          "late_flips": 0
+        },
+        {
+          "start": 31239,
+          "steps": 120,
+          "presents": 120,
+          "fields": 120,
+          "core": 4760124,
+          "peak": 5143440,
+          "waited": 101,
+          "late_flips": 0
+        },
+        {
+          "start": 31359,
+          "steps": 120,
+          "presents": 120,
+          "fields": 120,
+          "core": 4778129,
+          "peak": 5174616,
+          "waited": 92,
+          "late_flips": 0
+        },
+        {
+          "start": 31479,
+          "steps": 120,
+          "presents": 120,
+          "fields": 120,
+          "core": 4806814,
+          "peak": 5215055,
+          "waited": 73,
+          "late_flips": 0
+        },
+        {
+          "start": 31599,
+          "steps": 120,
+          "presents": 120,
+          "fields": 120,
+          "core": 4708977,
+          "peak": 4971653,
+          "waited": 114,
+          "late_flips": 0
+        },
+        {
+          "start": 31719,
+          "steps": 120,
+          "presents": 120,
+          "fields": 120,
+          "core": 4476649,
+          "peak": 5360665,
+          "waited": 84,
+          "late_flips": 0
+        },
+        {
+          "start": 31839,
+          "steps": 120,
+          "presents": 120,
+          "fields": 120,
+          "core": 4478654,
+          "peak": 5032833,
+          "waited": 103,
+          "late_flips": 0
+        },
+        {
+          "start": 31959,
+          "steps": 120,
+          "presents": 120,
+          "fields": 120,
+          "core": 4555564,
+          "peak": 5043789,
+          "waited": 95,
+          "late_flips": 0
+        },
+        {
+          "start": 32079,
+          "steps": 120,
+          "presents": 120,
+          "fields": 120,
+          "core": 4651032,
+          "peak": 5109376,
+          "waited": 84,
+          "late_flips": 0
+        },
+        {
+          "start": 32199,
+          "steps": 120,
+          "presents": 120,
+          "fields": 120,
+          "core": 4681818,
+          "peak": 5178637,
+          "waited": 81,
+          "late_flips": 0
+        },
+        {
+          "start": 32319,
+          "steps": 120,
+          "presents": 120,
+          "fields": 120,
+          "core": 4692680,
+          "peak": 5180466,
+          "waited": 79,
+          "late_flips": 0
+        },
+        {
+          "start": 32439,
+          "steps": 120,
+          "presents": 120,
+          "fields": 120,
+          "core": 4694205,
+          "peak": 5196349,
+          "waited": 85,
+          "late_flips": 0
+        },
+        {
+          "start": 32559,
+          "steps": 120,
+          "presents": 120,
+          "fields": 120,
+          "core": 4750965,
+          "peak": 5190312,
+          "waited": 63,
+          "late_flips": 0
+        },
+        {
+          "start": 32679,
+          "steps": 120,
+          "presents": 120,
+          "fields": 120,
+          "core": 4684640,
+          "peak": 5124618,
+          "waited": 68,
+          "late_flips": 0
+        },
+        {
+          "start": 32799,
+          "steps": 120,
+          "presents": 120,
+          "fields": 120,
+          "core": 4694440,
+          "peak": 5170655,
+          "waited": 78,
+          "late_flips": 0
+        },
+        {
+          "start": 32919,
+          "steps": 120,
+          "presents": 120,
+          "fields": 120,
+          "core": 4642253,
+          "peak": 5171640,
+          "waited": 73,
+          "late_flips": 0
+        },
+        {
+          "start": 33039,
+          "steps": 120,
+          "presents": 120,
+          "fields": 120,
+          "core": 4586828,
+          "peak": 5160640,
+          "waited": 92,
+          "late_flips": 0
+        },
+        {
+          "start": 33159,
+          "steps": 120,
+          "presents": 120,
+          "fields": 120,
+          "core": 4574340,
+          "peak": 5115804,
+          "waited": 89,
+          "late_flips": 0
+        },
+        {
+          "start": 33279,
+          "steps": 120,
+          "presents": 120,
+          "fields": 120,
+          "core": 4672811,
+          "peak": 5316989,
+          "waited": 77,
+          "late_flips": 0
+        },
+        {
+          "start": 33399,
+          "steps": 120,
+          "presents": 120,
+          "fields": 120,
+          "core": 4682340,
+          "peak": 5223179,
+          "waited": 73,
+          "late_flips": 0
+        },
+        {
+          "start": 33519,
+          "steps": 120,
+          "presents": 120,
+          "fields": 120,
+          "core": 4400846,
+          "peak": 4942706,
+          "waited": 119,
+          "late_flips": 0
+        },
+        {
+          "start": 33639,
+          "steps": 120,
+          "presents": 120,
+          "fields": 120,
+          "core": 4296889,
+          "peak": 4869758,
+          "waited": 120,
+          "late_flips": 0
+        },
+        {
+          "start": 33759,
+          "steps": 120,
+          "presents": 120,
+          "fields": 120,
+          "core": 4526198,
+          "peak": 5156007,
+          "waited": 101,
+          "late_flips": 0
+        },
+        {
+          "start": 33879,
+          "steps": 120,
+          "presents": 120,
+          "fields": 120,
+          "core": 4624063,
+          "peak": 5077189,
+          "waited": 80,
+          "late_flips": 0
+        },
+        {
+          "start": 33999,
+          "steps": 120,
+          "presents": 120,
+          "fields": 120,
+          "core": 4648401,
+          "peak": 5050658,
+          "waited": 72,
+          "late_flips": 0
+        },
+        {
+          "start": 34119,
+          "steps": 120,
+          "presents": 120,
+          "fields": 120,
+          "core": 4523263,
+          "peak": 5082382,
+          "waited": 102,
+          "late_flips": 0
+        },
+        {
+          "start": 34239,
+          "steps": 120,
+          "presents": 120,
+          "fields": 120,
+          "core": 4572351,
+          "peak": 5082137,
+          "waited": 99,
+          "late_flips": 0
+        },
+        {
+          "start": 34359,
+          "steps": 120,
+          "presents": 120,
+          "fields": 120,
+          "core": 4560749,
+          "peak": 5043180,
+          "waited": 94,
+          "late_flips": 0
+        },
+        {
+          "start": 34479,
+          "steps": 120,
+          "presents": 120,
+          "fields": 120,
+          "core": 4384730,
+          "peak": 5102468,
+          "waited": 108,
+          "late_flips": 0
+        },
+        {
+          "start": 34599,
+          "steps": 120,
+          "presents": 120,
+          "fields": 120,
+          "core": 4436086,
+          "peak": 4972078,
+          "waited": 118,
+          "late_flips": 0
+        },
+        {
+          "start": 34719,
+          "steps": 120,
+          "presents": 120,
+          "fields": 120,
+          "core": 4750534,
+          "peak": 5221866,
+          "waited": 104,
+          "late_flips": 0
+        },
+        {
+          "start": 34839,
+          "steps": 120,
+          "presents": 120,
+          "fields": 120,
+          "core": 4742982,
+          "peak": 5223196,
+          "waited": 106,
+          "late_flips": 0
+        },
+        {
+          "start": 34959,
+          "steps": 120,
+          "presents": 120,
+          "fields": 120,
+          "core": 4749542,
+          "peak": 5227469,
+          "waited": 99,
+          "late_flips": 0
+        },
+        {
+          "start": 35079,
+          "steps": 120,
+          "presents": 120,
+          "fields": 120,
+          "core": 4777969,
+          "peak": 5216843,
+          "waited": 89,
+          "late_flips": 0
+        },
+        {
+          "start": 35199,
+          "steps": 120,
+          "presents": 120,
+          "fields": 120,
+          "core": 4630718,
+          "peak": 4963465,
+          "waited": 119,
+          "late_flips": 0
+        }
+      ]
+    },
+    "720p": {
+      "refresh_hz": 60.0,
+      "timing": {
+        "windows": 35,
+        "refreshes": 4200,
+        "updates": 4200,
+        "presentations": 4200,
+        "fps": 60.0,
+        "worst_window_fps": 60.0,
+        "mean_core_cycles": 4613103,
+        "peak_core_cycles": 5323715
+      },
+      "phases": {
+        "tunnel_movement": {
+          "windows": 3,
+          "refreshes": 360,
+          "updates": 360,
+          "presentations": 360,
+          "fps": 60.0,
+          "worst_window_fps": 60.0,
+          "mean_core_cycles": 4782179,
+          "peak_core_cycles": 5216337
+        },
+        "battle_entry": {
+          "windows": 3,
+          "refreshes": 360,
+          "updates": 360,
+          "presentations": 360,
+          "fps": 60.0,
+          "worst_window_fps": 60.0,
+          "mean_core_cycles": 4503665,
+          "peak_core_cycles": 5323715
+        },
+        "auto_combat_and_reward": {
+          "windows": 19,
+          "refreshes": 2280,
+          "updates": 2280,
+          "presentations": 2280,
+          "fps": 60.0,
+          "worst_window_fps": 60.0,
+          "mean_core_cycles": 4606320,
+          "peak_core_cycles": 5237730
+        },
+        "return_to_tunnel": {
+          "windows": 6,
+          "refreshes": 720,
+          "updates": 720,
+          "presentations": 720,
+          "fps": 60.0,
+          "worst_window_fps": 60.0,
+          "mean_core_cycles": 4682858,
+          "peak_core_cycles": 5276259
+        }
+      },
+      "startup_window": {
+        "start": 31000,
+        "steps": 119,
+        "presents": 118,
+        "fields": 120,
+        "core": 4646942,
+        "peak": 5145883,
+        "waited": 16,
+        "late_flips": 0
+      },
+      "windows_after_startup": [
+        {
+          "start": 31119,
+          "steps": 120,
+          "presents": 120,
+          "fields": 120,
+          "core": 4237980,
+          "peak": 5007239,
+          "waited": 111,
+          "late_flips": 0
+        },
+        {
+          "start": 31239,
+          "steps": 120,
+          "presents": 120,
+          "fields": 120,
+          "core": 4757561,
+          "peak": 5143722,
+          "waited": 101,
+          "late_flips": 0
+        },
+        {
+          "start": 31359,
+          "steps": 120,
+          "presents": 120,
+          "fields": 120,
+          "core": 4781298,
+          "peak": 5179652,
+          "waited": 85,
+          "late_flips": 0
+        },
+        {
+          "start": 31479,
+          "steps": 120,
+          "presents": 120,
+          "fields": 120,
+          "core": 4807678,
+          "peak": 5216337,
+          "waited": 67,
+          "late_flips": 0
+        },
+        {
+          "start": 31599,
+          "steps": 120,
+          "presents": 120,
+          "fields": 120,
+          "core": 4710669,
+          "peak": 4970203,
+          "waited": 109,
+          "late_flips": 0
+        },
+        {
+          "start": 31719,
+          "steps": 120,
+          "presents": 120,
+          "fields": 120,
+          "core": 4476039,
+          "peak": 5323715,
+          "waited": 84,
+          "late_flips": 0
+        },
+        {
+          "start": 31839,
+          "steps": 120,
+          "presents": 120,
+          "fields": 120,
+          "core": 4477485,
+          "peak": 5032930,
+          "waited": 102,
+          "late_flips": 0
+        },
+        {
+          "start": 31959,
+          "steps": 120,
+          "presents": 120,
+          "fields": 120,
+          "core": 4557471,
+          "peak": 5126163,
+          "waited": 93,
+          "late_flips": 0
+        },
+        {
+          "start": 32079,
+          "steps": 120,
+          "presents": 120,
+          "fields": 120,
+          "core": 4650385,
+          "peak": 5112707,
+          "waited": 83,
+          "late_flips": 0
+        },
+        {
+          "start": 32199,
+          "steps": 120,
+          "presents": 120,
+          "fields": 120,
+          "core": 4682157,
+          "peak": 5180089,
+          "waited": 81,
+          "late_flips": 0
+        },
+        {
+          "start": 32319,
+          "steps": 120,
+          "presents": 120,
+          "fields": 120,
+          "core": 4692136,
+          "peak": 5184172,
+          "waited": 79,
+          "late_flips": 0
+        },
+        {
+          "start": 32439,
+          "steps": 120,
+          "presents": 120,
+          "fields": 120,
+          "core": 4694801,
+          "peak": 5198328,
+          "waited": 86,
+          "late_flips": 0
+        },
+        {
+          "start": 32559,
+          "steps": 120,
+          "presents": 120,
+          "fields": 120,
+          "core": 4753582,
+          "peak": 5193835,
+          "waited": 61,
+          "late_flips": 0
+        },
+        {
+          "start": 32679,
+          "steps": 120,
+          "presents": 120,
+          "fields": 120,
+          "core": 4683909,
+          "peak": 5198420,
+          "waited": 68,
+          "late_flips": 0
+        },
+        {
+          "start": 32799,
+          "steps": 120,
+          "presents": 120,
+          "fields": 120,
+          "core": 4695022,
+          "peak": 5167338,
+          "waited": 76,
+          "late_flips": 0
+        },
+        {
+          "start": 32919,
+          "steps": 120,
+          "presents": 120,
+          "fields": 120,
+          "core": 4640952,
+          "peak": 5168161,
+          "waited": 74,
+          "late_flips": 0
+        },
+        {
+          "start": 33039,
+          "steps": 120,
+          "presents": 120,
+          "fields": 120,
+          "core": 4589229,
+          "peak": 5123210,
+          "waited": 93,
+          "late_flips": 0
+        },
+        {
+          "start": 33159,
+          "steps": 120,
+          "presents": 120,
+          "fields": 120,
+          "core": 4574614,
+          "peak": 5139208,
+          "waited": 87,
+          "late_flips": 0
+        },
+        {
+          "start": 33279,
+          "steps": 120,
+          "presents": 120,
+          "fields": 120,
+          "core": 4674373,
+          "peak": 5237730,
+          "waited": 75,
+          "late_flips": 0
+        },
+        {
+          "start": 33399,
+          "steps": 120,
+          "presents": 120,
+          "fields": 120,
+          "core": 4686398,
+          "peak": 5225060,
+          "waited": 67,
+          "late_flips": 0
+        },
+        {
+          "start": 33519,
+          "steps": 120,
+          "presents": 120,
+          "fields": 120,
+          "core": 4399181,
+          "peak": 4935489,
+          "waited": 117,
+          "late_flips": 0
+        },
+        {
+          "start": 33639,
+          "steps": 120,
+          "presents": 120,
+          "fields": 120,
+          "core": 4298091,
+          "peak": 4866276,
+          "waited": 120,
+          "late_flips": 0
+        },
+        {
+          "start": 33759,
+          "steps": 120,
+          "presents": 120,
+          "fields": 120,
+          "core": 4525091,
+          "peak": 5155745,
+          "waited": 100,
+          "late_flips": 0
+        },
+        {
+          "start": 33879,
+          "steps": 120,
+          "presents": 120,
+          "fields": 120,
+          "core": 4625249,
+          "peak": 5093338,
+          "waited": 79,
+          "late_flips": 0
+        },
+        {
+          "start": 33999,
+          "steps": 120,
+          "presents": 120,
+          "fields": 120,
+          "core": 4647607,
+          "peak": 5091036,
+          "waited": 71,
+          "late_flips": 0
+        },
+        {
+          "start": 34119,
+          "steps": 120,
+          "presents": 120,
+          "fields": 120,
+          "core": 4522050,
+          "peak": 5062723,
+          "waited": 101,
+          "late_flips": 0
+        },
+        {
+          "start": 34239,
+          "steps": 120,
+          "presents": 120,
+          "fields": 120,
+          "core": 4573101,
+          "peak": 5083122,
+          "waited": 96,
+          "late_flips": 0
+        },
+        {
+          "start": 34359,
+          "steps": 120,
+          "presents": 120,
+          "fields": 120,
+          "core": 4562541,
+          "peak": 5038048,
+          "waited": 91,
+          "late_flips": 0
+        },
+        {
+          "start": 34479,
+          "steps": 120,
+          "presents": 120,
+          "fields": 120,
+          "core": 4384821,
+          "peak": 5107184,
+          "waited": 108,
+          "late_flips": 0
+        },
+        {
+          "start": 34599,
+          "steps": 120,
+          "presents": 120,
+          "fields": 120,
+          "core": 4441902,
+          "peak": 4992468,
+          "waited": 112,
+          "late_flips": 0
+        },
+        {
+          "start": 34719,
+          "steps": 120,
+          "presents": 120,
+          "fields": 120,
+          "core": 4754128,
+          "peak": 5276259,
+          "waited": 102,
+          "late_flips": 0
+        },
+        {
+          "start": 34839,
+          "steps": 120,
+          "presents": 120,
+          "fields": 120,
+          "core": 4743613,
+          "peak": 5221885,
+          "waited": 102,
+          "late_flips": 0
+        },
+        {
+          "start": 34959,
+          "steps": 120,
+          "presents": 120,
+          "fields": 120,
+          "core": 4749092,
+          "peak": 5222323,
+          "waited": 97,
+          "late_flips": 0
+        },
+        {
+          "start": 35079,
+          "steps": 120,
+          "presents": 120,
+          "fields": 120,
+          "core": 4779534,
+          "peak": 5217836,
+          "waited": 85,
+          "late_flips": 0
+        },
+        {
+          "start": 35199,
+          "steps": 120,
+          "presents": 120,
+          "fields": 120,
+          "core": 4628880,
+          "peak": 4957320,
+          "waited": 119,
+          "late_flips": 0
+        }
+      ]
+    }
+  },
+  "physical_ps2_opl": "Pending."
+}

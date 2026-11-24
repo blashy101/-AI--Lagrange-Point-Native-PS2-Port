@@ -1,0 +1,213 @@
+{
+  "changes": [
+    "Extend field dialogue and pickup message frames across the widescreen image; retain glyph size, choice cursors and original line breaks.",
+    "Repair map rows above an active message instead of disabling edge repairs for the whole picture.",
+    "Repair stale native-viewport background tiles using bounded map cells, restoring sprite priority.",
+    "Reuse decoded CHR tiles while their bytes and colors remain unchanged.",
+    "Resolve compiled instruction pages on mapper bank switches.",
+    "Finish PPU palette and emphasis conversion with the PS2 integer SIMD unit."
+  ],
+  "elf_sha256": "4047fed4d26d6ed157a1d78ec8480fc95757d455429cd9c2c1d363b2bcc5857c",
+  "iso_sha256": "daf7a99cc0ee270400daa839057a7212839e74bbbf06dcadf7a7ef9db1351d25",
+  "iso_executable_matches_elf": true,
+  "checks": [
+    "check-display",
+    "check-timing",
+    "check-audio",
+    "check-wide",
+    "check-pixels"
+  ],
+  "ppu_scalar_and_simd_cases": 65536,
+  "ppu_buffer_canaries_passed": true,
+  "map_tests": [
+    "Bounded map fill",
+    "Signed actor Y clipping",
+    "CHR RAM invalidation with stable bank pointers",
+    "Interior stale tile repair and sprite restoration",
+    "Nametable write invalidation",
+    "Fine-scroll repair alignment",
+    "Message region exclusion",
+    "Wide window rails, fill and unchanged glyph size",
+    "Opening/closing window guard"
+  ],
+  "original_replay_outputs_match": true,
+  "native_replay_frames": {
+    "english": 36000,
+    "japanese": 228682
+  },
+  "pcsx2": {
+    "version": "2.8.2",
+    "renderer": "OpenGL 1x",
+    "bios": "OpenPS2BIOS 0.6 with PS2SDK SIO2MAN and PADMAN in the private test profile",
+    "timing": {
+      "Tunnel dialogue and choice cursor": {
+        "nominal_refresh_hz": 59.94,
+        "presentations_hz": 59.52,
+        "checkpoints": [
+          {
+            "tick": 120,
+            "frames": 120,
+            "presents": 120,
+            "wide": 120,
+            "offered": 95838,
+            "accepted": 95838
+          },
+          {
+            "tick": 240,
+            "frames": 240,
+            "presents": 240,
+            "wide": 240,
+            "offered": 191674,
+            "accepted": 191674
+          },
+          {
+            "tick": 360,
+            "frames": 359,
+            "presents": 359,
+            "wide": 359,
+            "offered": 286712,
+            "accepted": 286712
+          },
+          {
+            "tick": 480,
+            "frames": 478,
+            "presents": 478,
+            "wide": 478,
+            "offered": 381750,
+            "accepted": 380153
+          },
+          {
+            "tick": 600,
+            "frames": 597,
+            "presents": 597,
+            "wide": 597,
+            "offered": 476788,
+            "accepted": 475191
+          },
+          {
+            "tick": 720,
+            "frames": 715,
+            "presents": 715,
+            "wide": 715,
+            "offered": 571027,
+            "accepted": 569430
+          }
+        ]
+      },
+      "Fountain room and map edge": {
+        "nominal_refresh_hz": 59.94,
+        "presentations_hz": 59.94,
+        "checkpoints": [
+          {
+            "tick": 120,
+            "frames": 120,
+            "presents": 120,
+            "wide": 120,
+            "offered": 95837,
+            "accepted": 95837
+          },
+          {
+            "tick": 240,
+            "frames": 240,
+            "presents": 240,
+            "wide": 240,
+            "offered": 191673,
+            "accepted": 191673
+          },
+          {
+            "tick": 360,
+            "frames": 360,
+            "presents": 360,
+            "wide": 360,
+            "offered": 287509,
+            "accepted": 287509
+          },
+          {
+            "tick": 480,
+            "frames": 480,
+            "presents": 480,
+            "wide": 480,
+            "offered": 383346,
+            "accepted": 383346
+          },
+          {
+            "tick": 600,
+            "frames": 600,
+            "presents": 600,
+            "wide": 600,
+            "offered": 479183,
+            "accepted": 479183
+          },
+          {
+            "tick": 720,
+            "frames": 720,
+            "presents": 720,
+            "wide": 720,
+            "offered": 575019,
+            "accepted": 575019
+          }
+        ]
+      },
+      "Japanese purple cave": {
+        "nominal_refresh_hz": 59.94,
+        "presentations_hz": 59.94,
+        "checkpoints": [
+          {
+            "tick": 120,
+            "frames": 120,
+            "presents": 120,
+            "wide": 120,
+            "offered": 95837,
+            "accepted": 95837
+          },
+          {
+            "tick": 240,
+            "frames": 240,
+            "presents": 240,
+            "wide": 240,
+            "offered": 191673,
+            "accepted": 191673
+          },
+          {
+            "tick": 360,
+            "frames": 360,
+            "presents": 360,
+            "wide": 360,
+            "offered": 287510,
+            "accepted": 287510
+          },
+          {
+            "tick": 480,
+            "frames": 480,
+            "presents": 480,
+            "wide": 480,
+            "offered": 383346,
+            "accepted": 383346
+          },
+          {
+            "tick": 600,
+            "frames": 600,
+            "presents": 600,
+            "wide": 600,
+            "offered": 479183,
+            "accepted": 479183
+          },
+          {
+            "tick": 720,
+            "frames": 720,
+            "presents": 720,
+            "wide": 720,
+            "offered": 575019,
+            "accepted": 575019
+          }
+        ]
+      }
+    }
+  },
+  "limitations": [
+    "Dialogue line breaks retain the original script layout.",
+    "Heavier scenes can still miss occasional refreshes.",
+    "Physical PS2 and OPL have not been tested."
+  ],
+  "previous_audio_and_edge_report": "presentation-v6.json"
+}

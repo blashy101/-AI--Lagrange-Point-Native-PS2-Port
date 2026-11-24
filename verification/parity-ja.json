@@ -1,0 +1,22 @@
+{
+  "edition": "ja",
+  "input": "japan.fm2",
+  "input_sha256": "f632bd92268a48c8953640a6d403d4486b90e9881d0310077748d147e3bc53ed",
+  "frames": 228682,
+  "video_frames": 228682,
+  "audio_frames": 182634144,
+  "memory_sha256": "4d2d4d029bfc4d9dddffa583d3528a1e5e594cb8b5490a691dbf091482abb229",
+  "video_sha256": "001516320e59c594392ae0290c4997451471cb8af36d0e72d23633d287e91d17",
+  "pcm_sha256": "a4624391326cf37ed8bd06ba73828ce29c108eb4baf61f2eeb6c234bc946c656",
+  "compiled_run": {
+    "compiled": 2057361291,
+    "mapped_fallback": 9,
+    "ram_fallback": 453848
+  },
+  "reference_run": {
+    "compiled": 0,
+    "mapped_fallback": 2057361300,
+    "ram_fallback": 453848
+  },
+  "wide_frames": 91233
+}

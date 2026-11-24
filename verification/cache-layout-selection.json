@@ -1,0 +1,11 @@
+{
+  "hot_handlers": 46,
+  "hot_code_bytes": 8032,
+  "descriptor_bytes": 368,
+  "all_handlers": 7526,
+  "shares": {
+    "en": 0.5935799898717434,
+    "ja": 0.5274052243088247
+  },
+  "baseline_address_span": 1853744
+}

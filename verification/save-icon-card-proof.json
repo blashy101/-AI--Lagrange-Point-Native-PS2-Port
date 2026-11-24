@@ -1,0 +1,15 @@
+{
+  "game_records_unchanged": true,
+  "record_sha256": {
+    "EN1.DAT": "ca9895c7fa319cc58060c4f9a67ca60fdb980abd9b2ae62e32201de7ca2f1251",
+    "JA1.DAT": "0953ee9199b051762f4446e2c907627c7cb19cf9412ce9aa3fa0326d271ae241"
+  },
+  "old_model_unchanged": true,
+  "old_model_sha256": "c46fd8a65a5c32d99aa0ee9d1ff5c29efb33b9d545efd02d45be49c3d145e574",
+  "model_matches_current_asset": true,
+  "model_sha256": "2442eae389c5e492810424e4c2009b320e60773f4cd7c39947aa2f4818d188b5",
+  "descriptor_uses_new_model": true,
+  "descriptor_sha256": "9616ae357598b0f31970e701b132848dfa8aa2b9f13f2442c639db9ebc4fc19a",
+  "neutral_ambient_light": true,
+  "model_bytes": 33688
+}

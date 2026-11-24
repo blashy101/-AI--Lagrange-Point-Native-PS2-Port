@@ -1,0 +1,255 @@
+{
+  "release": 12,
+  "generated_utc": "2026-11-22T01:49:20.321120+00:00",
+  "elf_sha256": "55926e56f459a0533c7b2ca187d925073548908c3f741077fd080ff21b964579",
+  "iso_sha256": "8c49a64e388c121e87c7f36ea48bad5071b24f4fcbd35030ba9efe01dbe40502",
+  "iso_executable_matches_elf": true,
+  "profile_elf_sha256": "afe0a46979f62e307d209123d1e686d694fbe32d00495f8d08056fb451cf2cb3",
+  "profile_iso_sha256": "bb04215be084fe6707cc21fa2fbe0fbf3a75ccfa3f9f974b9e6143a663ec9946",
+  "profile_iso_executable_matches_elf": true,
+  "previous_release_zip_sha256": "38662135e6254780e25a9fdeb42ba8152b6008e910fa6cad9cf0edb11e7fceb6",
+  "changes": {
+    "CPU_loop": "Move the full rare-path interpreter into a cold helper; keep the translated dispatch and interrupt loop small.",
+    "private_instruction_layout": "Deterministic equal-language profile ordering; game bytes and guest addresses unchanged.",
+    "linker": "Group hot handlers and CPU loop before the generic text wildcard in the SDK-derived linker script.",
+    "VRC7": "64-sample signed-16-bit temporary arrays; exact mixed PCM and complete chip state retained.",
+    "diagnostic": "Optional separate ISO with rolling active-update phase timing, visible only in the paused options menu.",
+    "normal_build_has_no_diagnostic_instrumentation": true,
+    "simulation_rate_audio_rate_and_frame_pacing_unchanged": true,
+    "version_11_sources_and_assets_unchanged": [
+      "src/iop_modules.c",
+      "src/audio_stream.c",
+      "src/memory_card.c",
+      "src/save_data.c",
+      "src/assets.S",
+      "src/display.h",
+      "src/frame_clock.h",
+      "src/intro_audio.c",
+      "assets/save.icn"
+    ],
+    "runtime_external_game_or_driver_reads": false
+  },
+  "code_and_temporary_data_footprint": {
+    "hot_handlers": 46,
+    "hot_code_bytes": 8032,
+    "descriptor_bytes": 368,
+    "all_handlers": 7526,
+    "shares": {
+      "en": 0.5935799898717434,
+      "ja": 0.5274052243088247
+    },
+    "baseline_address_span": 1853744,
+    "baseline_X6502_Run_bytes": 41324,
+    "X6502_Run": {
+      "address": 3892256,
+      "bytes": 3020
+    },
+    "hot_region_start": 3884224,
+    "hot_region_end": 3895280,
+    "hot_region_bytes": 11056,
+    "fallback": {
+      "address": 3895280,
+      "bytes": 38976
+    },
+    "VRC7_temporary_bytes_before": 3072,
+    "VRC7_temporary_bytes_after": 384
+  },
+  "dispatch_layout_sha256": "e5407f50f8c18b7a4cf40ae51e7e9c96053de5810ad5b6720ea867e8dedd1897",
+  "translation": {
+    "en": {
+      "sha256": "333cfe66a6e687f34a347e83cf5b82a997cb32415fc449f9d74eddfc616a5db7",
+      "translated_prg_starts": 49025,
+      "other_traced_prg_starts": []
+    },
+    "ja": {
+      "sha256": "3e8b4b68da3424a03c51aeceb5acb345d1d2738ad87342899a4053064a243b25",
+      "translated_prg_starts": 48810,
+      "other_traced_prg_starts": [
+        "5DFFF"
+      ]
+    },
+    "unique_native_encodings": 7526,
+    "dispatch_layout_sha256": "e5407f50f8c18b7a4cf40ae51e7e9c96053de5810ad5b6720ea867e8dedd1897",
+    "hot_native_encodings": 46
+  },
+  "bilingual_replays": {
+    "en": {
+      "edition": "en",
+      "input": "stage17_battle_inputs.json",
+      "input_sha256": "95debfa9439a7ca0bf662074dc22cf670bdd2283b7aefe03cfb0e04b85246a6b",
+      "frames": 36000,
+      "video_frames": 36000,
+      "audio_frames": 28750964,
+      "memory_sha256": "1cead290b3b6a5f43c0a3855dbe24a683333cb1f4faf01935e907dfb1e976400",
+      "video_sha256": "105d4f5cca73040fa1fd11bbe7d6a82c4c3770a65d49869526d6dd824dfec1f6",
+      "pcm_sha256": "9de0782d19a331f7ce84b0f2f8c3f5ffdfaa4a0b5fb949c187d9ad9c9f512a08",
+      "compiled_run": {
+        "compiled": 326002770,
+        "mapped_fallback": 0,
+        "ram_fallback": 55356
+      },
+      "reference_run": {
+        "compiled": 0,
+        "mapped_fallback": 326002770,
+        "ram_fallback": 55356
+      },
+      "wide_frames": 23751,
+      "matches_version_11": true,
+      "matches_instruction_reference": true
+    },
+    "ja": {
+      "edition": "ja",
+      "input": "japan.fm2",
+      "input_sha256": "f632bd92268a48c8953640a6d403d4486b90e9881d0310077748d147e3bc53ed",
+      "frames": 228682,
+      "video_frames": 228682,
+      "audio_frames": 182634144,
+      "memory_sha256": "4d2d4d029bfc4d9dddffa583d3528a1e5e594cb8b5490a691dbf091482abb229",
+      "video_sha256": "001516320e59c594392ae0290c4997451471cb8af36d0e72d23633d287e91d17",
+      "pcm_sha256": "a4624391326cf37ed8bd06ba73828ce29c108eb4baf61f2eeb6c234bc946c656",
+      "compiled_run": {
+        "compiled": 2057361291,
+        "mapped_fallback": 9,
+        "ram_fallback": 453848
+      },
+      "reference_run": {
+        "compiled": 0,
+        "mapped_fallback": 2057361300,
+        "ram_fallback": 453848
+      },
+      "wide_frames": 91233,
+      "matches_version_11": true,
+      "matches_instruction_reference": true
+    }
+  },
+  "host_checks": {
+    "startup_scenarios": [
+      "opl",
+      "rom",
+      "embedded",
+      "native-lmb",
+      "missing-pad",
+      "missing-sio2",
+      "missing-audio-rpc",
+      "hung-audio-rpc",
+      "patch-failure",
+      "legacy-search-zero",
+      "legacy-search-positive",
+      "residency-flags",
+      "opaque-list",
+      "mx4sio",
+      "usb",
+      "reset-request-timeout",
+      "reset-dma-timeout",
+      "reset-sync-timeout",
+      "resident-mx4sio"
+    ],
+    "card_fault_and_migration_scenarios": 29,
+    "VRC7_differential_samples": 10268279,
+    "VRC7_envelope_states_covered": "0x7f",
+    "display_timing_widescreen_pixels_audio_save_and_code_cache_passed": true
+  },
+  "PCSX2": {
+    "version": "2.8.2",
+    "firmware": "Private OpenPS2BIOS 0.6 profiles using public old/new PS2SDK ROM drivers; no firmware binary distributed.",
+    "frontends": {
+      "hw-en": {
+        "language": "en",
+        "public_sdk_rom_driver_family": "legacy",
+        "normal_continue_map": 5,
+        "diagnostic_build": false,
+        "menu_controller_input_and_pause_resume": true,
+        "IOP_reset_received": true,
+        "audio": {
+          "submitted": 1610853,
+          "sent": 1608825,
+          "dropped": 0,
+          "errors": 0
+        }
+      },
+      "hw-ja-final": {
+        "language": "ja",
+        "public_sdk_rom_driver_family": "modern",
+        "normal_continue_map": 6,
+        "diagnostic_build": false,
+        "menu_controller_input_and_pause_resume": true,
+        "IOP_reset_received": true,
+        "audio": {
+          "submitted": 1602068,
+          "sent": 1601270,
+          "dropped": 0,
+          "errors": 0
+        }
+      },
+      "hw-profile": {
+        "language": "en",
+        "public_sdk_rom_driver_family": "legacy",
+        "normal_continue_map": 5,
+        "diagnostic_build": true,
+        "menu_controller_input_and_pause_resume": true,
+        "IOP_reset_received": true,
+        "audio": {
+          "submitted": 1609255,
+          "sent": 1607289,
+          "dropped": 0,
+          "errors": 0
+        }
+      }
+    },
+    "timing": {
+      "version_11": {
+        "frames": 2582,
+        "samples": 601,
+        "fields": 604,
+        "presents": 600,
+        "core_us": 9946965,
+        "render_us": 105272,
+        "core_max_us": 17524,
+        "render_max_us": 482,
+        "audio_sent": 2061285,
+        "dropped": 0,
+        "errors": 0,
+        "nominal_refresh_hz": 59.94,
+        "presentation_hz": 59.54304635761589,
+        "core_mean_us": 16550.69051580699,
+        "refreshes_without_new_presentation": 4
+      },
+      "version_12": {
+        "frames": 2582,
+        "samples": 601,
+        "fields": 607,
+        "presents": 600,
+        "core_us": 9988263,
+        "render_us": 100897,
+        "core_max_us": 17597,
+        "render_max_us": 244,
+        "audio_sent": 2061285,
+        "dropped": 0,
+        "errors": 0,
+        "nominal_refresh_hz": 59.94,
+        "presentation_hz": 59.24876441515651,
+        "core_mean_us": 16619.40599001664,
+        "refreshes_without_new_presentation": 7
+      }
+    },
+    "timing_method": "Native 16:9/720p game workload; normal Continue to map 5, 120 stable frames, then 600 presentations while direction alternates every 120 updates. Guest audio enabled; host audio Null; OpenGL 1x; one emulator at a time.",
+    "timing_limit": "Similar emulator performance, not a demonstrated speedup: 604 versus 607 fields for 600 presentations. The intended physical-console cache benefit is unmeasured. The 601 timing samples include one presentation-queue boundary update.",
+    "prior_release_native_SIMD_and_card_write_evidence": "performance-reset.json",
+    "cold_boot_required": true
+  },
+  "physical_hardware": {
+    "version_11_user_feedback": "Works on MX4SIO; PCSX2 performance perfect; frequent dips remain on PS2 hardware.",
+    "version_12": "Not tested on a physical PS2 here; console retest required."
+  },
+  "diagnostic_notes": {
+    "window_updates": 240,
+    "pause": "L2+R2 captures the current partial sample, or retains the last complete sample.",
+    "units": "Integer microseconds, displayed as average/maximum per update.",
+    "WORK": "Active update after input scanning, excluding the initial field wait; includes card polling and render.",
+    "CORE": "Game execution, device synthesis and callbacks. WIDE and AUDIO are nested portions, not additional phases.",
+    "AUDIO": "Frontend processing and queue callback, not all synthesis or IOP playback.",
+    "RENDER": "Includes waiting for a previously queued presentation.",
+    "counters": "Field/presentation counter deltas over the measured sample; no derived FPS estimate is displayed.",
+    "overhead": "Diagnostic only; normal build has no phase timers or timing UI."
+  }
+}

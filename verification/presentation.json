@@ -1,0 +1,10 @@
+{
+  "elf_sha256": "55926e56f459a0533c7b2ca187d925073548908c3f741077fd080ff21b964579",
+  "iso_sha256": "8c49a64e388c121e87c7f36ea48bad5071b24f4fcbd35030ba9efe01dbe40502",
+  "iso_executable_matches_elf": true,
+  "profile_elf_sha256": "afe0a46979f62e307d209123d1e686d694fbe32d00495f8d08056fb451cf2cb3",
+  "profile_iso_sha256": "bb04215be084fe6707cc21fa2fbe0fbf3a75ccfa3f9f974b9e6143a663ec9946",
+  "profile_iso_executable_matches_elf": true,
+  "current_report": "hardware-performance.json",
+  "previous_report": "performance-reset.json"
+}

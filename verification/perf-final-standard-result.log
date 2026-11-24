@@ -1,0 +1,19 @@
+[    8.7522] LP_BENCH_START
+[   18.8130] LP_MEASURE frames=600 samples=600 fields=617 presents=599 core_us=6906173 render_us=189942 core_max_us=12364 render_max_us=484 audio_sent=479183 dropped=0 errors=0
+[   18.8133] LP_CORE_HIST 0 0 0 0 0 0 62 9 3 6 11 0 509 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+[   18.8134] LP_PARTS wide_us=142 audio_us=103770
+[   18.8136] LP_RENDER_HIST 600 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+[   28.8782] LP_MEASURE frames=1200 samples=1200 fields=1217 presents=1199 core_us=14476559 render_us=377000 core_max_us=12932 render_max_us=484 audio_sent=957567 dropped=0 errors=0
+[   28.8842] LP_CORE_HIST 0 0 0 0 0 0 62 9 3 6 18 25 1077 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+[   28.8867] LP_PARTS wide_us=319 audio_us=201845
+[   28.8868] LP_RENDER_HIST 1200 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+[   39.0118] LP_MEASURE frames=1800 samples=1800 fields=1817 presents=1799 core_us=22467008 render_us=567121 core_max_us=14420 render_max_us=484 audio_sent=1437548 dropped=0 errors=0
+[   39.0124] LP_CORE_HIST 0 0 0 0 0 0 62 9 3 6 23 25 1077 594 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+[   39.0125] LP_PARTS wide_us=508 audio_us=301708
+[   39.0127] LP_RENDER_HIST 1800 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+[   42.0488] LP_FIELD_START frame=1982
+[   52.0726] LP_MEASURE frames=2582 samples=601 fields=601 presents=600 core_us=9418826 render_us=411053 core_max_us=16463 render_max_us=2178 audio_sent=2062083 dropped=0 errors=0
+[   52.0731] LP_CORE_HIST 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 550 49 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+[   52.0731] LP_PARTS wide_us=157 audio_us=104750
+[   52.0733] LP_RENDER_HIST 488 112 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+[   52.0735] LP_TEST_PASS

@@ -1,0 +1,17 @@
+make: Entering directory '/workspace/scratch/70d2a2beb227/refine/Lagrange_Point_PS2'
+mkdir -p build
+cc -Wall -Wextra -Werror -std=c11 -Isrc tests/wide_field.c -o build/wide-field-test
+build/wide-field-test
+mkdir -p build
+cc -Wall -Wextra -Werror -std=c11 -Isrc tests/ppu_pixels.c -o build/ppu-pixels-test
+build/ppu-pixels-test
+mkdir -p build
+cc -Wall -Wextra -Werror -std=c11 -Isrc tests/intro_audio.c src/intro_audio.c -lm -o build/intro-audio-test
+build/intro-audio-test
+mkdir -p build
+cc -Wall -Wextra -Werror -std=c11 -Isrc tests/display.c -o build/display-test
+build/display-test
+mkdir -p build
+cc -Wall -Wextra -Werror -std=c11 -Isrc tests/frame_clock.c -o build/frame-clock-test
+build/frame-clock-test
+make: Leaving directory '/workspace/scratch/70d2a2beb227/refine/Lagrange_Point_PS2'

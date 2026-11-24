@@ -1,0 +1,134 @@
+{
+  "generated_utc": "2026-11-19T22:42:54.734484+00:00",
+  "elf_sha256": "b578492ca7cf04f3c9b422acce193b9178fc919d54a6f23e131cabad084be285",
+  "iso_sha256": "5536d27ff734c855ee8e4314fe1b9819d2ffe482191105a5eda07ee9d3e903a9",
+  "iso_executable_matches_elf": true,
+  "iso_modules_match_sdk": true,
+  "checks": [
+    "check-save",
+    "check-display",
+    "check-timing",
+    "check-audio",
+    "check-wide",
+    "check-pixels"
+  ],
+  "menu": {
+    "startup_rows": [
+      "SCREEN",
+      "OUTPUT",
+      "LANGUAGE",
+      "PLAY"
+    ],
+    "pause_rows": [
+      "SCREEN",
+      "OUTPUT",
+      "RESUME"
+    ],
+    "screen_choices": [
+      "4:3",
+      "16:9"
+    ],
+    "output_choices": [
+      "480i",
+      "480p",
+      "720p"
+    ],
+    "fixed_defaults": [
+      "sharp filter",
+      "+6 dB gain",
+      "balanced intro audio"
+    ],
+    "16_9_uses_expanded_field_renderer": true
+  },
+  "record_layout": {
+    "memory_card_slot": 1,
+    "directory": "/BILPNT-00100",
+    "english_generations": [
+      "EN0.DAT",
+      "EN1.DAT"
+    ],
+    "japanese_generations": [
+      "JA0.DAT",
+      "JA1.DAT"
+    ],
+    "game_slots_per_language": 2,
+    "game_slot_bytes": 656,
+    "auxiliary_bytes": 32,
+    "payload_bytes": 1344,
+    "file_bytes": 1376,
+    "format_magic": "LP2CARD1",
+    "crc32_and_game_slot_checksums": true,
+    "working_cartridge_ram_is_not_persisted": true,
+    "background_worker_with_immutable_snapshot": true,
+    "alternating_generations_preserve_last_valid_copy": true,
+    "write_flush_close_and_readback_before_success": true,
+    "load_before_first_game_frame": true,
+    "production_formats_cards": false
+  },
+  "host_tests": {
+    "passed": true,
+    "cold_process_mock_scenarios": 22,
+    "details": "memory-card-mock.json",
+    "unit_log": "memory-card-unit.log",
+    "faults": [
+      "missing card",
+      "unformatted card",
+      "full card",
+      "short write",
+      "corrupt newest generation",
+      "pending second save",
+      "language isolation"
+    ],
+    "record_checks": [
+      "single-bit corruption in every byte for both editions",
+      "wrong edition",
+      "truncated and oversized files",
+      "native save checksums",
+      "stable snapshot debounce",
+      "working RAM changes do not trigger writes",
+      "bounded restore",
+      "sequence number wrap"
+    ]
+  },
+  "pcsx2": {
+    "version": "2.8.2",
+    "renderer": "OpenGL 1x",
+    "bios": "OpenPS2BIOS 0.6 with PS2SDK SIO2MAN, PADMAN, MCMAN and MCSERV in a private test profile",
+    "private_test_bios_sha256": "35864ca160aaacaa31d2f0cf135fe3dc1331de10159cd4e31f9c83edd6aa4813",
+    "test_card_image_bytes": 8650752,
+    "test_card_formatted_by_private_harness": true,
+    "save_fixtures": "memory-card-fixtures.jsonl",
+    "fixture_provenance": "Original $2D:AF79 serializer executed against captured live game state; both records checked against the independent serializer contract.",
+    "native_worker_probes": {
+      "en-write": "passed",
+      "en-load": "passed",
+      "ja-write": "passed",
+      "ja-load": "passed",
+      "en-load-after-ja": "passed"
+    },
+    "english_cold_load_after_japanese_write": "passed",
+    "integrated_frontend": {
+      "english": {
+        "card_load_payload_matches": true,
+        "normal_continue_map": 5,
+        "stable_field_frames_after_continue": 120,
+        "resume_menu": "passed"
+      },
+      "japanese": {
+        "card_load_payload_matches": true,
+        "normal_continue_map": 6,
+        "stable_field_frames_after_continue": 120,
+        "resume_menu": "passed"
+      },
+      "menu_selects_16_9": true,
+      "480p_and_720p_output_confirmation": "passed",
+      "uses_production_memory_card_object": true,
+      "harness_changes": "A copy of the frontend adds automatic menu/game input and assertions; the memory card backend is the production object."
+    }
+  },
+  "limitations": [
+    "Physical PS2 and OPL have not been tested.",
+    "Prior widescreen timing measurements are retained as historical evidence in presentation-v7.json; no new timing claim is made here.",
+    "Some expanded map borders remain imperfect."
+  ]
+}

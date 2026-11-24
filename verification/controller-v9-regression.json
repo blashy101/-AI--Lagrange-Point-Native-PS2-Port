@@ -1,0 +1,17 @@
+[
+  {
+    "scenario": "legacy-search-zero",
+    "v9_exit_code": -6,
+    "stderr": "iop-v9-test: /workspace/scratch/70d2a2beb227/save-update/Lagrange_Point_PS2/tests/iop_modules.c:80: main: Assertion `ready.pad&&ready.card&&ready.audio' failed."
+  },
+  {
+    "scenario": "legacy-search-positive",
+    "v9_exit_code": -6,
+    "stderr": "iop-v9-test: /workspace/scratch/70d2a2beb227/save-update/Lagrange_Point_PS2/tests/iop_modules.c:80: main: Assertion `ready.pad&&ready.card&&ready.audio' failed."
+  },
+  {
+    "scenario": "residency-flags",
+    "v9_exit_code": -6,
+    "stderr": "iop-v9-test: /workspace/scratch/70d2a2beb227/save-update/Lagrange_Point_PS2/tests/iop_modules.c:80: main: Assertion `ready.pad&&ready.card&&ready.audio' failed."
+  }
+]

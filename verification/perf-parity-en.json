@@ -1,0 +1,22 @@
+{
+  "edition": "en",
+  "input": "stage17_battle_inputs.json",
+  "input_sha256": "95debfa9439a7ca0bf662074dc22cf670bdd2283b7aefe03cfb0e04b85246a6b",
+  "frames": 36000,
+  "video_frames": 36000,
+  "audio_frames": 28750964,
+  "memory_sha256": "1cead290b3b6a5f43c0a3855dbe24a683333cb1f4faf01935e907dfb1e976400",
+  "video_sha256": "105d4f5cca73040fa1fd11bbe7d6a82c4c3770a65d49869526d6dd824dfec1f6",
+  "pcm_sha256": "9de0782d19a331f7ce84b0f2f8c3f5ffdfaa4a0b5fb949c187d9ad9c9f512a08",
+  "compiled_run": {
+    "compiled": 326002770,
+    "mapped_fallback": 0,
+    "ram_fallback": 55356
+  },
+  "reference_run": {
+    "compiled": 0,
+    "mapped_fallback": 326002770,
+    "ram_fallback": 55356
+  },
+  "wide_frames": 23751
+}

@@ -1,0 +1,15 @@
+{
+  "en": {
+    "sha256": "333cfe66a6e687f34a347e83cf5b82a997cb32415fc449f9d74eddfc616a5db7",
+    "translated_prg_starts": 49025,
+    "other_traced_prg_starts": []
+  },
+  "ja": {
+    "sha256": "3e8b4b68da3424a03c51aeceb5acb345d1d2738ad87342899a4053064a243b25",
+    "translated_prg_starts": 48810,
+    "other_traced_prg_starts": [
+      "5DFFF"
+    ]
+  },
+  "unique_native_encodings": 7526
+}

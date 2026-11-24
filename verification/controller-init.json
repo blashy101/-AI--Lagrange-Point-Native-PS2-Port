@@ -1,0 +1,130 @@
+{
+  "generated_utc": "2026-11-20T03:41:00.584872+00:00",
+  "elf_sha256": "883386710af2bbb0246208745abd321d901021d4daae43d86a12501cd765e7f4",
+  "iso_sha256": "ccdd6d312c495823dee2f56d9371068e56e534cd831673006c6f3895f99f9858",
+  "iso_executable_matches_elf": true,
+  "problem": "The previous startup could show CONTROLLER INIT FAILED and MEMORY CARD UNAVAILABLE on ROM-based loaders.",
+  "changes": {
+    "resident_module_lookup": "PS2SDK SMOD module-list interface; no LOADFILE search RPC",
+    "module_start_result": "Interpret the low two residency bits, including nonzero upper flags",
+    "readiness": "Check actual RPC endpoints independently of duplicate-load or module lookup results",
+    "loader_iop_and_sio2_hooks_preserved": true,
+    "runtime_external_irx_reads": false,
+    "audio_pause": "Mute while retaining the IOP read clock; replace 5120 resumed frames before unmuting",
+    "audio_worker_does_not_stop_the_iop_read_head": true,
+    "game_thread_priority": 64,
+    "audio_thread_priority": 48,
+    "save_record_format_and_cover_icon_unchanged": true
+  },
+  "host_tests": {
+    "checks": [
+      "check-display",
+      "check-timing",
+      "check-audio",
+      "check-audio-stream",
+      "check-iop",
+      "check-icon",
+      "check-wide",
+      "check-pixels",
+      "check-save"
+    ],
+    "startup_scenarios": [
+      "opl",
+      "rom",
+      "embedded",
+      "native-lmb",
+      "missing-pad",
+      "missing-sio2",
+      "missing-audio-rpc",
+      "hung-audio-rpc",
+      "patch-failure",
+      "legacy-search-zero",
+      "legacy-search-positive",
+      "residency-flags",
+      "opaque-list"
+    ],
+    "card_scenarios": 29,
+    "v9_failures_reproduced": [
+      {
+        "scenario": "legacy-search-zero",
+        "v9_exit_code": -6,
+        "stderr": "iop-v9-test: /workspace/scratch/70d2a2beb227/save-update/Lagrange_Point_PS2/tests/iop_modules.c:80: main: Assertion `ready.pad&&ready.card&&ready.audio' failed."
+      },
+      {
+        "scenario": "legacy-search-positive",
+        "v9_exit_code": -6,
+        "stderr": "iop-v9-test: /workspace/scratch/70d2a2beb227/save-update/Lagrange_Point_PS2/tests/iop_modules.c:80: main: Assertion `ready.pad&&ready.card&&ready.audio' failed."
+      },
+      {
+        "scenario": "residency-flags",
+        "v9_exit_code": -6,
+        "stderr": "iop-v9-test: /workspace/scratch/70d2a2beb227/save-update/Lagrange_Point_PS2/tests/iop_modules.c:80: main: Assertion `ready.pad&&ready.card&&ready.audio' failed."
+      }
+    ]
+  },
+  "pcsx2": {
+    "version": "2.8.2",
+    "frontend_runs": {
+      "legacy-en": {
+        "driver_family": "legacy",
+        "language": "English",
+        "normal_continue_map": 5,
+        "actual_controller_menu_navigation": true,
+        "480p_and_720p_confirmation": true,
+        "16_9_selected_by_controller": true,
+        "L2_R2_pause_and_controller_Resume": true,
+        "game_frames_after_resume": 30,
+        "audio_frames": {
+          "submitted": 1609255,
+          "sent": 1607658,
+          "dropped": 0,
+          "errors": 0
+        },
+        "test_bios_sha256": "234570af0e55dc2d0ab48781c6d9fb6757612ab7b37a9c8e8006ed8125173813"
+      },
+      "modern-ja": {
+        "driver_family": "modern",
+        "language": "Japanese",
+        "normal_continue_map": 6,
+        "actual_controller_menu_navigation": true,
+        "480p_and_720p_confirmation": true,
+        "16_9_selected_by_controller": true,
+        "L2_R2_pause_and_controller_Resume": true,
+        "game_frames_after_resume": 30,
+        "audio_frames": {
+          "submitted": 1606061,
+          "sent": 1603666,
+          "dropped": 0,
+          "errors": 0
+        },
+        "test_bios_sha256": "35864ca160aaacaa31d2f0cf135fe3dc1331de10159cd4e31f9c83edd6aa4813"
+      }
+    },
+    "input_method": "Keyboard events enter PCSX2, its emulated DualShock2, PS2SDK padRead and the production menu handlers. No menu actions or pause/resume state are injected directly.",
+    "game_fixture": "Original serializer-generated records; normal game file selection reaches the stored map",
+    "legacy_search_compatibility": "A test-only search function returns zero; the corrected startup never calls it.",
+    "driver_roms": "Private OpenPS2BIOS 0.6 profiles with public PS2SDK sio2man/padman/mcman/mcserv .irx and -old.irx variants",
+    "card_write_restart_load": {
+      "both_language_game_records_unchanged": true,
+      "record_sha256": {
+        "EN1.DAT": "ca9895c7fa319cc58060c4f9a67ca60fdb980abd9b2ae62e32201de7ca2f1251",
+        "JA1.DAT": "0953ee9199b051762f4446e2c907627c7cb19cf9412ce9aa3fa0326d271ae241"
+      },
+      "native_legacy_card_write_and_cold_load": true,
+      "new_generation_sha256": "6f8abbc0b449730052208ea3c1496f177f018c9c0cc31191cdc6c23b5bd5bfef",
+      "new_generation_sequence": 2,
+      "new_generation_crc32_valid": true,
+      "test_mutation": "One auxiliary payload byte; both original game slot checksums remain valid.",
+      "previous_english_generation_and_japanese_record_preserved": true
+    }
+  },
+  "iso_files": [
+    "LPNT_001.00;1",
+    "SYSTEM.CNF;1"
+  ],
+  "limits": [
+    "Physical USB/MX4SIO retest is still required; these profiles do not certify Sony firmware or physical performance.",
+    "Native controller and audio tests cover the startup, saved-game Continue and options/Resume paths shown in the logs."
+  ],
+  "prior_validation": "hardware-update.json"
+}

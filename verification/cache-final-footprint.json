@@ -1,0 +1,25 @@
+{
+  "hot_handlers": 46,
+  "hot_code_bytes": 8032,
+  "descriptor_bytes": 368,
+  "all_handlers": 7526,
+  "shares": {
+    "en": 0.5935799898717434,
+    "ja": 0.5274052243088247
+  },
+  "baseline_address_span": 1853744,
+  "baseline_X6502_Run_bytes": 41324,
+  "X6502_Run": {
+    "address": 3892256,
+    "bytes": 3020
+  },
+  "hot_region_start": 3884224,
+  "hot_region_end": 3895280,
+  "hot_region_bytes": 11056,
+  "fallback": {
+    "address": 3895280,
+    "bytes": 38976
+  },
+  "VRC7_temporary_bytes_before": 3072,
+  "VRC7_temporary_bytes_after": 384
+}

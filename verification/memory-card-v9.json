@@ -1,0 +1,10 @@
+{
+  "elf_sha256": "f2285a7cddd0d69b7a2d135d68d0470493dbecd4c51945548f1dd5c446bea256",
+  "iso_sha256": "320a98a870a33a0823986bf5a2110fd3edd2961058541563a961fdd99724f158",
+  "iso_executable_matches_elf": true,
+  "current_report": "hardware-update.json",
+  "record_format_unchanged": true,
+  "english_and_japanese_records_compatible": true,
+  "legacy_record_validation": "memory-card-v8.json",
+  "host_scenarios": 29
+}

@@ -1,0 +1,128 @@
+[    0.0127] Couldn't find translation for system language C, using en instead
+[    0.0128] Loaded translation file for language en-US
+[    0.0223] PCSX2 v2.8.2
+[    0.0223] Savestate version: 0x9a590000
+[    0.0223] 
+[    0.0223] 
+[    0.0223] Host Machine Init:
+[    0.0224]   Operating System = Debian GNU/Linux 13
+[    0.0224]   Available RAM    = 9260 MB (9.04 GB)
+[    0.0224]   Physical RAM     = 9967 MB (9.73 GB)
+[    0.0224] 
+[    0.0224]   Processor        = Intel INTEL XEON PLATINUM 8573C
+[    0.0224]   Core Count       = 9 cores
+[    0.0224]   Thread Count     = 9 threads
+[    0.0224]   Cluster Count    = 1 clusters
+[    0.0224] CPU Extensions Detected:
+[    0.0224]   AVX AVX2 AVX512F
+[    0.0224] 
+[    0.0395] SDLInputSource: Using Controller DB from resources.
+[    0.0592] SDL_InitSubSystem(SDL_INIT_JOYSTICK | SDL_INIT_GAMEPAD | SDL_INIT_HAPTIC) failed
+[    0.0592] (InputManager) Source 'SDL' failed to initialize.
+[    0.0592] SDLInputSource: Using Controller DB from resources.
+[    0.0666] SDL_InitSubSystem(SDL_INIT_JOYSTICK | SDL_INIT_GAMEPAD | SDL_INIT_HAPTIC) failed
+[    0.0666] (InputManager) Source 'SDL' failed to initialize.
+[    0.1311] Loading BIOS...
+[    0.1312] BIOS Found: USA     v00.06(05/11/2026)  Devel 
+[    0.1461] BIOS rom1 module not found, skipping...
+[    0.1462] BIOS rom2 module not found, skipping...
+[    0.1462] Opening CDVD...
+[    0.1468] isoFile open ok: /workspace/scratch/70d2a2beb227/perf-fix/vectors.iso
+[    0.1468]   Image type  = CD
+[    0.1468]  * CDVD Disk Open: CD, 1 tracks (1 to 1):
+[    0.1468]  * * Track 1: Data (Mode 1) (612 sectors)
+[    0.1513] GameDB: Has not been initialized yet, initializing...
+[    0.2758] GameDB: 12841 games on record (loaded in 124.51ms)
+[    0.2758] Serial 'LPNT-00100' not found in GameDB.
+[    0.2758] Disc changed to vectors.iso.
+[    0.2758]   Name: LPNT-00100 [?]
+[    0.2758]   Serial: LPNT-00100
+[    0.2758]   Version: 1.00
+[    0.2758]   CRC: 6E9A1DEC
+[    0.2759] Applying settings...
+[    0.2759] SDLInputSource: Using Controller DB from resources.
+[    0.2834] SDL_InitSubSystem(SDL_INIT_JOYSTICK | SDL_INIT_GAMEPAD | SDL_INIT_HAPTIC) failed
+[    0.2834] (InputManager) Source 'SDL' failed to initialize.
+[    0.2834] [Unsafe Settings] Graphics API is not set to Automatic. This may cause performance problems and graphical issues.
+[    0.2834] OSD [unsafe_settings_warning]:  Graphics API is not set to Automatic. This may cause performance problems and graphical issues.
+[    0.2859] Reopening memory cards...
+[    0.2860] McdSlot 0 [File]: LPTestCard.ps2 [8 MB, Formatted]
+[    0.2860] McdSlot 1 [File]: [disabled/empty filename]
+[    0.2867] HLE Host: Set 'host:' root path to: /workspace/scratch/70d2a2beb227/perf-fix
+[    0.2868] EE/iR5900 Recompiler Reset
+[    1.8830] Opening GS...
+[    1.9035] (GetRefreshRateFromXRandR) Modeline is invalid: 0/0/0
+[    1.9035] Surface refresh rate: 60 Hz
+[    1.9040] Loading EGL from libEGL.so...
+[    1.9047] Loading EGL from libEGL.so.1...
+[    1.9520] GLAD EGL Version: 1.0
+[    1.9522] Using EGL platform EGL_EXT_platform_x11.
+[    1.9558] eglInitialize() version: 1.5
+[    1.9559] GLAD EGL Version: 1.5
+[    1.9559] eglCreateContext() failed: 0x3009
+[    1.9967] Got GL version 4.5
+[    1.9967] Negative swap interval/tear-control is NOT supported
+[    1.9993] GL_VENDOR: Mesa
+[    1.9993] GL_VERSION: 4.5 (Core Profile) Mesa 25.0.7-2+deb13u1
+[    1.9993] GL_RENDERER: llvmpipe (LLVM 19.1.7, 256 bits)
+[    1.9993] GL_SHADING_LANGUAGE_VERSION: 4.50
+[    1.9994] GL: Using hardware for point expansion, vertex expanding for line expansion and vertex expanding for sprite expansion.
+[    2.0028] 1 program binary formats supported by driver
+[    2.0029] Read 66 entries from '/workspace/scratch/70d2a2beb227/perf-fix/mc-pcsx/PCSX2/cache/gl_programs.idx'
+[    2.8388] OpenGL Graphics Driver Info:
+[    2.8388] OpenGL Context:
+[    2.8388] 4.5 (Core Profile) Mesa 25.0.7-2+deb13u1
+[    2.8388] Mesa llvmpipe (LLVM 19.1.7, 256 bits)
+[    2.8388] GLSL: 4.50
+[    2.8566] Opening SPU2...
+[    2.8629] Creating Null audio stream, sample rate = 48000, expansion = Disabled, buffer = 50, latency = 20, stretching enabled, driver = , device = 
+[    2.8630] Initializing Pad...
+[    2.8630] OSD [ControllerNotConfigured]: Controller 1 has no input bindings configured.
+[    2.8630] Initializing SIO2...
+[    2.8631] Initializing SIO0...
+[    2.8631] Opening DEV9...
+[    2.8916] Opening USB...
+[    2.8916] Opening FW...
+[    2.9035] VM subsystems initialized in 2772.86 ms
+[    2.9329] Failed to inhibit screen saver.
+[    2.9566] Failed to inhibit screen saver.
+[    2.9586] [openbios:ee] OpenPS2BIOS 0.6 ready
+[    3.0186] [openbios:ee] starting EELOAD
+[    3.0227] ELF Loading: cdrom0:\LPNT_001.00;1, Game CRC = 6E9A1DEC, EntryPoint = 0x00100B20
+[    3.0231] [openbios:ee] LoadExecPS2 cdrom0:LPNT_001.00;1
+[    3.0525] [openbios:disc] loading ELF bytes=001255dc
+[    3.1524] [openbios:ee] exec entry=00100b20 argc=00000001
+[    3.1527] ELF cdrom0:\LPNT_001.00;1 with entry point at 0x00100B20 is executing.
+[    3.1527] ELF changed, active CRC 6E9A1DEC (cdrom0:\LPNT_001.00;1)
+[    3.1532] Applying core settings...
+[    3.1533] Updating CPU configuration...
+[    3.1866] EE/iR5900 Recompiler Reset
+[    3.2294] [openbios:ee] SetSyscall number=0000005a handler=0010b310
+[    3.2296] [openbios:ee] SetSyscall number=0000005b handler=80076000
+[    3.2296] [openbios:ee] SetSyscall number=000000fc handler=80076278
+[    3.2297] [openbios:ee] SetSyscall number=000000fd handler=80076278
+[    3.2297] [openbios:ee] SetSyscall number=000000fe handler=80076098
+[    3.2297] [openbios:ee] SetSyscall number=000000ff handler=80076098
+[    3.2297] [openbios:ee] SetSyscall number=0000012c handler=80076478
+[    3.2297] [openbios:ee] SetSyscall number=00000008 handler=800766a4
+[    3.2302] BIOS Warning: Unable to get a thread list offset. The debugger thread and stack frame views will not be functional.
+[    3.2304] [openbios:ee] SetSyscall number=0000005a handler=0010b310
+[    3.2304] [openbios:ee] SetSyscall number=0000005b handler=80075000
+[    3.2305] [openbios:ee] SetSyscall number=00000055 handler=80075098
+[    3.2305] [openbios:ee] SetSyscall number=00000056 handler=80075118
+[    3.2305] [openbios:ee] SetSyscall number=00000057 handler=80075168
+[    3.2305] [openbios:ee] SetSyscall number=00000058 handler=800751c8
+[    3.2305] [openbios:ee] SetSyscall number=00000059 handler=80075220
+[    3.2318] Warning: GetOsdConfigParam2 Reading extended language/version configs, may be incorrect!
+[    3.2388] [openbios:ee] SifSetDma first src=00127780 dest=00044f00 size=00000014 attr=00000044 count=00000001
+[    3.2394] [openbios:iop] ready
+[    3.2417] LP_NATIVE_VECTORS_PASS
+[    3.2419] LP_TEST_PASS
+Received CTRL+C, attempting graceful shutdown. Press CTRL+C again to force.
+[    3.2997] (VMManager) Pausing...
+[    3.3029] Add 0 seconds play time to LPNT-00100 -> now 646
+[    3.4273] Unloading EGL.
+[    3.4286] SDLInputSource: Using Controller DB from resources.
+[    3.4362] SDL_InitSubSystem(SDL_INIT_JOYSTICK | SDL_INIT_GAMEPAD | SDL_INIT_HAPTIC) failed
+[    3.4362] (InputManager) Source 'SDL' failed to initialize.
+[    3.4453] Releasing host memory for virtual systems...

@@ -1,0 +1,13 @@
+{
+  "both_language_game_records_unchanged": true,
+  "record_sha256": {
+    "EN1.DAT": "ca9895c7fa319cc58060c4f9a67ca60fdb980abd9b2ae62e32201de7ca2f1251",
+    "JA1.DAT": "0953ee9199b051762f4446e2c907627c7cb19cf9412ce9aa3fa0326d271ae241"
+  },
+  "native_legacy_card_write_and_cold_load": true,
+  "new_generation_sha256": "6f8abbc0b449730052208ea3c1496f177f018c9c0cc31191cdc6c23b5bd5bfef",
+  "new_generation_sequence": 2,
+  "new_generation_crc32_valid": true,
+  "test_mutation": "One auxiliary payload byte; both original game slot checksums remain valid.",
+  "previous_english_generation_and_japanese_record_preserved": true
+}

@@ -1,0 +1,14 @@
+{
+  "elf_sha256": "b578492ca7cf04f3c9b422acce193b9178fc919d54a6f23e131cabad084be285",
+  "iso_sha256": "5536d27ff734c855ee8e4314fe1b9819d2ffe482191105a5eda07ee9d3e903a9",
+  "iso_executable_matches_elf": true,
+  "iso_modules_match_sdk": true,
+  "current_release_report": "memory-card.json",
+  "previous_widescreen_and_timing_report": "presentation-v7.json",
+  "changes": [
+    "Simplify menus to 4:3/16:9, resolution, language and Play/Resume.",
+    "Enable sharp filtering, +6 dB gain and intro balancing by default.",
+    "Persist both in-game slots independently for English and Japanese on PS2 memory card Slot 1.",
+    "Load records at startup and report background write status with verified alternating backups."
+  ]
+}

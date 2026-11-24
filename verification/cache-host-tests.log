@@ -1,0 +1,94 @@
+make: Entering directory '/workspace/scratch/70d2a2beb227/save-update/Lagrange_Point_PS2'
+mkdir -p build
+cc -Wall -Wextra -Werror -std=c11 -Isrc tests/display.c -o build/display-test
+build/display-test
+mkdir -p build
+cc -Wall -Wextra -Werror -std=c11 -Isrc tests/frame_clock.c -o build/frame-clock-test
+build/frame-clock-test
+mkdir -p build
+cc -Wall -Wextra -Werror -std=c11 -Isrc tests/intro_audio.c src/intro_audio.c -lm -o build/intro-audio-test
+build/intro-audio-test
+cc -Wall -Wextra -Werror -std=c11 -Isrc tests/audio_vectors.c src/intro_audio.c -lm -o build/audio-vectors-test
+build/audio-vectors-test
+mkdir -p build
+cc -Wall -Wextra -Werror -std=c11 -pthread -Itests/audio_mock -Itests/card_mock -Isrc tests/audio_stream.c src/audio_stream.c -o build/audio-stream-test
+build/audio-stream-test
+Audio worker: blocked IOP leaves producer free; FIFO, copied PCM, short writes, pause epochs, muted ring priming, overflow and error recovery passed.
+mkdir -p build
+cc -Wall -Wextra -Werror -std=c11 -Itests/iop_mock -Isrc tests/iop_modules.c src/iop_modules.c tests/iop_mock/assets.S -o build/iop-modules-test
+python3 -c 'import subprocess; [subprocess.run(["build/iop-modules-test", s], check=True, timeout=5) for s in ["opl", "rom", "embedded", "native-lmb", "missing-pad", "missing-sio2", "missing-audio-rpc", "hung-audio-rpc", "patch-failure", "legacy-search-zero", "legacy-search-positive", "residency-flags", "opaque-list", "mx4sio", "usb", "reset-request-timeout", "reset-dma-timeout", "reset-sync-timeout", "resident-mx4sio"]]'
+opl: pad=1 card=1 audio=1 ROM=5 embedded=1
+rom: pad=1 card=1 audio=1 ROM=5 embedded=1
+embedded: pad=1 card=1 audio=1 ROM=5 embedded=6
+native-lmb: pad=1 card=1 audio=1 ROM=5 embedded=6
+missing-pad: pad=0 card=1 audio=1 ROM=5 embedded=2
+missing-sio2: pad=0 card=0 audio=1 ROM=5 embedded=5
+missing-audio-rpc: pad=1 card=1 audio=0 ROM=5 embedded=1
+hung-audio-rpc: pad=1 card=1 audio=0 ROM=5 embedded=1
+patch-failure: pad=0 card=0 audio=0 ROM=5 embedded=6
+legacy-search-zero: pad=1 card=1 audio=1 ROM=5 embedded=1
+legacy-search-positive: pad=1 card=1 audio=1 ROM=5 embedded=1
+residency-flags: pad=1 card=1 audio=1 ROM=5 embedded=1
+opaque-list: pad=1 card=1 audio=1 ROM=5 embedded=1
+mx4sio: pad=1 card=1 audio=1 ROM=5 embedded=1
+usb: pad=1 card=1 audio=1 ROM=5 embedded=1
+reset-request-timeout: IOP RESET REQUEST TIMED OUT
+reset-dma-timeout: IOP RESET REQUEST TIMED OUT
+reset-sync-timeout: IOP REBOOT TIMED OUT
+resident-mx4sio: BOOT DEVICE DRIVER STILL ACTIVE
+python3 tests/save_icon.py
+Browser model: 36 outward-facing vertices, correct UV bounds, static animation and all 16384 PSMCT16 texels passed.
+mkdir -p build
+cc -Wall -Wextra -Werror -std=c11 -Isrc tests/wide_field.c -o build/wide-field-test
+build/wide-field-test
+mkdir -p build
+cc -Wall -Wextra -Werror -std=c11 -Isrc tests/ppu_pixels.c -o build/ppu-pixels-test
+build/ppu-pixels-test
+mkdir -p build
+cc -Wall -Wextra -Werror -std=c11 -Isrc tests/save_data.c src/save_data.c -o build/save-data-test
+build/save-data-test
+cc -Wall -Wextra -Werror -std=c11 -pthread -Itests/card_mock -Isrc tests/memory_card.c tests/card_mock/runtime.c src/memory_card.c src/save_data.c tests/card_mock/assets.S -o build/memory-card-test
+python3 tests/test_memory_card.py
+{
+  "passed": true,
+  "checks": [
+    "empty 0 0: MEMORY CARD READY",
+    "save 0 1: SAVED TO MEMORY CARD",
+    "load 0 1: MEMORY CARD SAVE LOADED",
+    "icon 0 1: MEMORY CARD READ OR WRITE FAILED",
+    "load 0 1: MEMORY CARD SAVE LOADED",
+    "icon 0 1: SAVE ICON UPDATED",
+    "icon 0 1: MEMORY CARD SAVE LOADED",
+    "empty 1 0: MEMORY CARD READY",
+    "save 1 7: SAVED TO MEMORY CARD",
+    "load 0 1: MEMORY CARD SAVE LOADED",
+    "load 1 7: MEMORY CARD SAVE LOADED",
+    "save 0 2: SAVED TO MEMORY CARD",
+    "load 0 2: MEMORY CARD SAVE LOADED",
+    "save 0 3: MEMORY CARD READ OR WRITE FAILED",
+    "load 0 2: BACKUP SAVE LOADED",
+    "save 0 4: SAVED TO MEMORY CARD",
+    "load 0 4: MEMORY CARD SAVE LOADED",
+    "load 0 2: BACKUP SAVE LOADED",
+    "save 0 5: NO MEMORY CARD IN SLOT 1",
+    "save 0 5: MEMORY CARD NEEDS FORMATTING",
+    "save 0 5: MEMORY CARD IS FULL",
+    "load 0 2: BACKUP SAVE LOADED",
+    "load 1 7: MEMORY CARD SAVE LOADED",
+    "two 0 8: SAVED TO MEMORY CARD",
+    "load 0 9: MEMORY CARD SAVE LOADED",
+    "load 1 7: MEMORY CARD SAVE LOADED",
+    "icon-save 0 9: SAVED TO MEMORY CARD",
+    "load 0 10: MEMORY CARD SAVE LOADED",
+    "load 1 7: MEMORY CARD SAVE LOADED"
+  ]
+}
+mkdir -p build
+cc -Wall -Wextra -Werror -std=c11 -Isrc tests/native_map_cache.c -o build/native-map-cache-test
+build/native-map-cache-test
+Native map cache: bilingual mappings, bank changes, handler interception/restoration, bounds, encryption and reference fallback passed.
+mkdir -p build
+cc -O2 -Wall -Wextra -Werror -Wno-calloc-transposed-args -std=gnu11 tests/vrc7_fill.c -lm -o build/vrc7-fill-test
+build/vrc7-fill-test
+VRC7 blocks: 10268279 bit-identical mixed samples and full chip states; envelope states=0x7f
+make: Leaving directory '/workspace/scratch/70d2a2beb227/save-update/Lagrange_Point_PS2'

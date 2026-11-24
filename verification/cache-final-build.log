@@ -1,0 +1,14 @@
+make: Entering directory '/workspace/scratch/70d2a2beb227/save-update/Lagrange_Point_PS2'
+mkdir -p build/ee
+mips64r5900el-ps2-elf-gcc -D_EE -DPS2 -G0 -O2 -Wall -Wextra -Werror -std=gnu11 -I/workspace/scratch/70d2a2beb227/save-update/toolchain/ps2dev/ps2sdk/ee/include -I/workspace/scratch/70d2a2beb227/save-update/toolchain/ps2dev/ps2sdk/common/include -I/workspace/scratch/70d2a2beb227/save-update/toolchain/ps2dev/gsKit/include -Ithird_party/fceumm/src/drivers/libretro/libretro-common/include -c src/frontend.c -o build/ee/frontend.o
+mkdir -p build/ee
+mips64r5900el-ps2-elf-gcc -D_EE -DPS2 -G0 -O2 -Wall -Wextra -Werror -std=gnu11 -DLP_PERF=1 -I/workspace/scratch/70d2a2beb227/save-update/toolchain/ps2dev/ps2sdk/ee/include -I/workspace/scratch/70d2a2beb227/save-update/toolchain/ps2dev/ps2sdk/common/include -I/workspace/scratch/70d2a2beb227/save-update/toolchain/ps2dev/gsKit/include -Ithird_party/fceumm/src/drivers/libretro/libretro-common/include -c src/frontend.c -o build/ee/frontend-profile.o
+mips64r5900el-ps2-elf-gcc -O3 -mtune=r5900 -flto -fno-semantic-interposition -flto=auto -Tbuild/ee/linkfile -Wl,-zmax-page-size=128 \
+    -L"/workspace/scratch/70d2a2beb227/save-update/toolchain/ps2dev/ps2sdk/ee/lib" -L"/workspace/scratch/70d2a2beb227/save-update/toolchain/ps2dev/gsKit/lib" -o build/lagrange-symbols.elf build/ee/frontend.o build/ee/intro_audio.o build/ee/audio_stream.o build/ee/iop_modules.o build/ee/save_data.o build/ee/memory_card.o build/ee/assets.o build/core-ee/fceumm_libretro_ps2.a \
+    -lgskit -ldmakit -lpatches -laudsrv -lpad -lmc -lm
+mips64r5900el-ps2-elf-gcc -O3 -mtune=r5900 -flto -fno-semantic-interposition -flto=auto -Tbuild/ee/linkfile -Wl,-zmax-page-size=128 -L"/workspace/scratch/70d2a2beb227/save-update/toolchain/ps2dev/ps2sdk/ee/lib" -L"/workspace/scratch/70d2a2beb227/save-update/toolchain/ps2dev/gsKit/lib" -o build/lagrange-profile-symbols.elf build/ee/frontend-profile.o build/ee/intro_audio.o build/ee/audio_stream.o build/ee/iop_modules.o build/ee/save_data.o build/ee/memory_card.o build/ee/assets.o build/core-ee/fceumm_libretro_ps2.a -lgskit -ldmakit -lpatches -laudsrv -lpad -lmc -lm
+mips64r5900el-ps2-elf-strip -o build/LAGRANGE.ELF build/lagrange-symbols.elf
+python3 tools/make_iso.py "build/LAGRANGE.ELF" "build/LPNT_001.00.Lagrange_Point_PS2.iso"
+mips64r5900el-ps2-elf-strip -o build/LAGRANGE_PROFILE.ELF build/lagrange-profile-symbols.elf
+python3 tools/make_iso.py "build/LAGRANGE_PROFILE.ELF" "build/LPNT_001.00.Lagrange_Point_PS2_Profile.iso"
+make: Leaving directory '/workspace/scratch/70d2a2beb227/save-update/Lagrange_Point_PS2'

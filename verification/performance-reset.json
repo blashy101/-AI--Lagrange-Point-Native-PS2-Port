@@ -1,0 +1,213 @@
+{
+  "release": 11,
+  "generated_utc": "2026-11-20T19:53:49.988373+00:00",
+  "elf_sha256": "46492e92ea8c64559d95f9cb81bfa72da0b41a400b586b8d11d67e1f7395bff7",
+  "iso_sha256": "793cc9cae807991ccb475ddcf13789f34014f55f998650523937815b22cc9157",
+  "iso_executable_matches_elf": true,
+  "changes": {
+    "startup": "Clean IOP restart after the executable is in RAM; do not reinject boot-device storage drivers.",
+    "startup_timeouts": "Three seconds each for reset submission and completion; persistent RPC readiness descriptors.",
+    "storage_residue_check": "Fail startup if a recognized MX4SIO or USB mass-storage driver remains resident.",
+    "audio_transport": "Try one bounded play RPC; wait for space only after a short transfer. Retain tail, pause epochs and muted resume priming.",
+    "VRC7": "Channel-major blocks of up to 256 samples; identical mixed PCM and full chip state.",
+    "CPU_dispatch": "Validate and invalidate cached ROM instruction pages on read-handler changes, including Game Genie table restoration.",
+    "SIMD": "Wide-image palette spans and settled +6 dB gain, with scalar tails/alignment fallback.",
+    "frame_pacing": "Existing vblank-driven update/presentation path retained.",
+    "save_record_format_icon_and_menu_choices_unchanged": true,
+    "runtime_external_game_or_driver_reads": false,
+    "loader_pad_emulation_and_virtual_card_services_retained": false
+  },
+  "host_checks": {
+    "startup_scenarios": [
+      "opl",
+      "rom",
+      "embedded",
+      "native-lmb",
+      "missing-pad",
+      "missing-sio2",
+      "missing-audio-rpc",
+      "hung-audio-rpc",
+      "patch-failure",
+      "legacy-search-zero",
+      "legacy-search-positive",
+      "residency-flags",
+      "opaque-list",
+      "mx4sio",
+      "usb",
+      "reset-request-timeout",
+      "reset-dma-timeout",
+      "reset-sync-timeout",
+      "resident-mx4sio"
+    ],
+    "card_fault_and_migration_scenarios": 29,
+    "VRC7_differential_samples": 10268279,
+    "VRC7_envelope_states_covered": "0x7f",
+    "ROM_read_cache_and_bank_invalidation": true,
+    "pixel_gain_and_buffer_guards": true
+  },
+  "bilingual_replays": {
+    "en": {
+      "edition": "en",
+      "input": "stage17_battle_inputs.json",
+      "input_sha256": "95debfa9439a7ca0bf662074dc22cf670bdd2283b7aefe03cfb0e04b85246a6b",
+      "frames": 36000,
+      "video_frames": 36000,
+      "audio_frames": 28750964,
+      "memory_sha256": "1cead290b3b6a5f43c0a3855dbe24a683333cb1f4faf01935e907dfb1e976400",
+      "video_sha256": "105d4f5cca73040fa1fd11bbe7d6a82c4c3770a65d49869526d6dd824dfec1f6",
+      "pcm_sha256": "9de0782d19a331f7ce84b0f2f8c3f5ffdfaa4a0b5fb949c187d9ad9c9f512a08",
+      "compiled_run": {
+        "compiled": 326002770,
+        "mapped_fallback": 0,
+        "ram_fallback": 55356
+      },
+      "reference_run": {
+        "compiled": 0,
+        "mapped_fallback": 326002770,
+        "ram_fallback": 55356
+      },
+      "wide_frames": 23751,
+      "matches_previous_release": true,
+      "matches_instruction_reference": true
+    },
+    "ja": {
+      "edition": "ja",
+      "input": "japan.fm2",
+      "input_sha256": "f632bd92268a48c8953640a6d403d4486b90e9881d0310077748d147e3bc53ed",
+      "frames": 228682,
+      "video_frames": 228682,
+      "audio_frames": 182634144,
+      "memory_sha256": "4d2d4d029bfc4d9dddffa583d3528a1e5e594cb8b5490a691dbf091482abb229",
+      "video_sha256": "001516320e59c594392ae0290c4997451471cb8af36d0e72d23633d287e91d17",
+      "pcm_sha256": "a4624391326cf37ed8bd06ba73828ce29c108eb4baf61f2eeb6c234bc946c656",
+      "compiled_run": {
+        "compiled": 2057361291,
+        "mapped_fallback": 9,
+        "ram_fallback": 453848
+      },
+      "reference_run": {
+        "compiled": 0,
+        "mapped_fallback": 2057361300,
+        "ram_fallback": 453848
+      },
+      "wide_frames": 91233,
+      "matches_previous_release": true,
+      "matches_instruction_reference": true
+    }
+  },
+  "PCSX2": {
+    "version": "2.8.2",
+    "renderer": "OpenGL 1x, host audio Null; guest audio enabled",
+    "firmware": "Private OpenPS2BIOS 0.6 profiles using public old/new PS2SDK ROM drivers; no firmware binary distributed.",
+    "frontends": {
+      "en": {
+        "public_sdk_rom_driver_family": "legacy",
+        "normal_continue_map": 5,
+        "menu_controller_input_and_pause_resume": true,
+        "IOP_reset_received": true,
+        "audio": {
+          "submitted": 1610853,
+          "sent": 1608026,
+          "dropped": 0,
+          "errors": 0
+        }
+      },
+      "ja": {
+        "public_sdk_rom_driver_family": "modern",
+        "normal_continue_map": 6,
+        "menu_controller_input_and_pause_resume": true,
+        "IOP_reset_received": true,
+        "audio": {
+          "submitted": 1604464,
+          "sent": 1603665,
+          "dropped": 0,
+          "errors": 0
+        }
+      }
+    },
+    "native_SIMD_oracles_passed": true,
+    "native_card_write_and_cold_load_passed": true,
+    "timing": {
+      "v10_16_9_720p": {
+        "frames": 2582,
+        "samples": 601,
+        "fields": 619,
+        "presents": 600,
+        "core_us": 10183420,
+        "render_us": 113914,
+        "core_max_us": 17809,
+        "render_max_us": 220,
+        "audio_sent": 2061285,
+        "dropped": 0,
+        "errors": 0,
+        "nominal_refresh_hz": 59.94,
+        "presentation_hz": 58.10016155088853,
+        "refreshes_without_a_new_presentation": 19
+      },
+      "v11_16_9_720p": {
+        "frames": 2582,
+        "samples": 601,
+        "fields": 604,
+        "presents": 600,
+        "core_us": 9946965,
+        "render_us": 105272,
+        "core_max_us": 17524,
+        "render_max_us": 482,
+        "audio_sent": 2061285,
+        "dropped": 0,
+        "errors": 0,
+        "nominal_refresh_hz": 59.94,
+        "presentation_hz": 59.54304635761589,
+        "refreshes_without_a_new_presentation": 4
+      },
+      "v11_4_3_480i": {
+        "frames": 2582,
+        "samples": 601,
+        "fields": 601,
+        "presents": 600,
+        "core_us": 9418826,
+        "render_us": 411053,
+        "core_max_us": 16463,
+        "render_max_us": 2178,
+        "audio_sent": 2062083,
+        "dropped": 0,
+        "errors": 0,
+        "nominal_refresh_hz": 59.94,
+        "presentation_hz": 59.84026622296173,
+        "refreshes_without_a_new_presentation": 1
+      }
+    },
+    "timing_method": "Normal Continue from original-serializer fixtures, then 120 stable field frames. Count new buffer presentations over the next 600 walking frames on map 5, with left/right direction alternating every 120 frames. Timer probes measure core/render work without per-frame logging.",
+    "timing_limit": "A short instrumented field workload, not a whole-game hardware benchmark. A few refreshes still repeat the previous picture.",
+    "cold_boot_required": true
+  },
+  "card_proof": {
+    "EN0.DAT": {
+      "bytes": 1376,
+      "sha256": "6f8abbc0b449730052208ea3c1496f177f018c9c0cc31191cdc6c23b5bd5bfef",
+      "header_hex": "4c503243415244310000000002000000400500006c24176a0000000000000000",
+      "sequence": 2,
+      "crc32_valid": true
+    },
+    "EN1.DAT": {
+      "bytes": 1376,
+      "sha256": "ca9895c7fa319cc58060c4f9a67ca60fdb980abd9b2ae62e32201de7ca2f1251",
+      "header_hex": "4c503243415244310000000001000000400500009e7d82050000000000000000",
+      "sequence": 1,
+      "crc32_valid": true
+    },
+    "JA1.DAT": {
+      "bytes": 1376,
+      "sha256": "0953ee9199b051762f4446e2c907627c7cb19cf9412ce9aa3fa0326d271ae241",
+      "header_hex": "4c503243415244310100000001000000400500000629dcde0000000000000000",
+      "sequence": 1,
+      "crc32_valid": true
+    },
+    "both_languages_previous_records_unchanged": true,
+    "native_write_and_cold_load_passed": true
+  },
+  "physical_hardware": {
+    "USB": "Not tested here",
+    "MX4SIO": "Not tested here; startup is designed to remove the resident SIO2/storage conflict path."
+  }
+}

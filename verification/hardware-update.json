@@ -1,0 +1,143 @@
+{
+  "generated_utc": "2026-11-20T03:03:30.089401+00:00",
+  "elf_sha256": "f2285a7cddd0d69b7a2d135d68d0470493dbecd4c51945548f1dd5c446bea256",
+  "iso_sha256": "320a98a870a33a0823986bf5a2110fd3edd2961058541563a961fdd99724f158",
+  "iso_executable_matches_elf": true,
+  "physical_hardware": {
+    "user_report_on_previous_release": {
+      "usb": "frequent stuttering",
+      "mx4sio": "does not start",
+      "icon": "appearance did not match intent"
+    },
+    "current_release": "USB and MX4SIO hardware retest required; PCSX2 results do not establish physical compatibility or frame rate"
+  },
+  "startup": {
+    "iso_files": [
+      "LPNT_001.00;1",
+      "SYSTEM.CNF;1"
+    ],
+    "embedded_driver_sha256": {
+      "sio2man": "44748d1c67b22132c026dd05bb06314bcbb5318a3f12835fd388f4e2b3126986",
+      "padman": "1ca382e617528b179405edbcbb744c421019e9cb2bce9a7fe30f3d68c074f112",
+      "mcman": "5bb7d332523add2a834374998e5dd6268c9b8a05dbff3346bff334e7d2023dd7",
+      "mcserv": "9f1b2ee6eb5f7c1f56ce225100824d85bc615eda3dac4f6be00b5f9f6d3c8924",
+      "libsd": "fc5e94504f5d5d9363bf6066b6b7a1f4302a8d1e4f8e6e647f16a8ef8e980477",
+      "audsrv": "be7dbc68b9d8e2ae27c6250c0abd1f93fab6b8c0dc3c44cd7defd167f7a4786b"
+    },
+    "reuses_resident_drivers_before_rom_or_embedded_fallback": true,
+    "preserves_loader_iop_and_sio2_hooks": true,
+    "resets_iop": false,
+    "runtime_external_irx_reads": false,
+    "game_assets_loaded_from_elf": true,
+    "optional_lmb_patch_failure_does_not_prevent_native_buffer_loading": true,
+    "rpc_endpoint_checks_use_nowait_requests_and_two_second_deadlines": true
+  },
+  "audio": {
+    "producer_copies_pcm_without_iop_calls": true,
+    "main_thread_priority": 64,
+    "worker_priority": 48,
+    "loader_inherited_priority_is_normalized_to_prevent_audio_starvation": true,
+    "queue_blocks": 4,
+    "maximum_frames_per_block": 1024,
+    "partial_transfers_retry_the_remaining_samples": true,
+    "pause_generation_invalidates_queued_pcm": true,
+    "host_tests": [
+      "producer returns while IOP is blocked",
+      "FIFO and immutable copied samples",
+      "partial transfers",
+      "bounded overflow",
+      "pause/resume generation",
+      "error recovery",
+      "large callbacks split into bounded blocks"
+    ]
+  },
+  "save_icon": {
+    "artwork": "Blue and gold logo plaque adapted from the user-supplied Lagrange Point cover",
+    "texture_pixels": [
+      128,
+      128
+    ],
+    "texture_format": "PSMCT16 (R bits 0..4, G 5..9, B 10..14)",
+    "vertices": 36,
+    "model_bytes": 33688,
+    "model_sha256": "2442eae389c5e492810424e4c2009b320e60773f4cd7c39947aa2f4818d188b5",
+    "native_y_down_orientation_checked": true,
+    "neutral_ambient_light": true,
+    "filename": "COVER.ICN",
+    "existing_saves_upgrade_in_background": true,
+    "metadata_only_job_preserves_game_records": true,
+    "existing_up_to_date_metadata_is_not_rewritten": true,
+    "interrupted_model_upgrade_preserves_previous_descriptor_and_game_records": true,
+    "native_card_validation": {
+      "game_records_unchanged": true,
+      "record_sha256": {
+        "EN1.DAT": "ca9895c7fa319cc58060c4f9a67ca60fdb980abd9b2ae62e32201de7ca2f1251",
+        "JA1.DAT": "0953ee9199b051762f4446e2c907627c7cb19cf9412ce9aa3fa0326d271ae241"
+      },
+      "old_model_unchanged": true,
+      "old_model_sha256": "c46fd8a65a5c32d99aa0ee9d1ff5c29efb33b9d545efd02d45be49c3d145e574",
+      "model_matches_current_asset": true,
+      "model_sha256": "2442eae389c5e492810424e4c2009b320e60773f4cd7c39947aa2f4818d188b5",
+      "descriptor_uses_new_model": true,
+      "descriptor_sha256": "9616ae357598b0f31970e701b132848dfa8aa2b9f13f2442c639db9ebc4fc19a",
+      "neutral_ambient_light": true,
+      "model_bytes": 33688
+    },
+    "independent_renderer": {
+      "project": "https://github.com/bucanero/ps2vmc-tool",
+      "commit": "32a024518586a47d685d8c4ea58b67dc4e4472ce",
+      "input": "Icon and descriptor exported from the actual test card after the production worker upgraded it",
+      "preview": "save-cover-browser-preview.png"
+    }
+  },
+  "tests": {
+    "host_checks": [
+      "check-display",
+      "check-timing",
+      "check-audio",
+      "check-audio-stream",
+      "check-iop",
+      "check-icon",
+      "check-wide",
+      "check-pixels",
+      "check-save"
+    ],
+    "card_fault_and_migration_scenarios": 29,
+    "iop_startup_scenarios": 9,
+    "pcsx2_version": "2.8.2",
+    "test_bios": "OpenPS2BIOS 0.6 with SDK SIO2MAN, PADMAN, MCMAN and MCSERV in the private ROM",
+    "frontend_harness": "Automated menu and game input/assertions in a copy of the frontend; production audio, IOP, card and core objects",
+    "frontends": {
+      "en": {
+        "boot_services": "passed",
+        "normal_continue_map": 5,
+        "resume_menu": "passed",
+        "720p_16_9_menu_and_gameplay": "passed",
+        "audio_frames": {
+          "submitted": 1582900,
+          "sent": 1582900,
+          "dropped": 0,
+          "errors": 0
+        },
+        "inherited_main_priority": 1,
+        "normalized_main_priority": 64
+      },
+      "ja": {
+        "boot_services": "passed",
+        "normal_continue_map": 6,
+        "resume_menu": "passed",
+        "720p_16_9_menu_and_gameplay": "passed",
+        "audio_frames": {
+          "submitted": 1576512,
+          "sent": 1574914,
+          "dropped": 0,
+          "errors": 0
+        },
+        "inherited_main_priority": 1,
+        "normalized_main_priority": 64
+      }
+    }
+  },
+  "previous_memory_card_validation": "memory-card-v8.json",
+  "previous_presentation_validation": "presentation-v8.json"
+}

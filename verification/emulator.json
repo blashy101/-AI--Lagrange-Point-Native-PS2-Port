@@ -1,0 +1,11 @@
+{
+  "emulator": "PCSX2 2.8.2 Linux",
+  "elf_sha256": "7181dec8c79dcd0e597f1837c00d72a0904f4ad0b3ce123568915b4e6553f3f2",
+  "iso_sha256": "2926b07b21e6060576cd2114d8789dfeeed94bbbfe67fdf7f60caa73a9055c51",
+  "disc_boot": "English new game and file menu reached via the normal controller entry point.",
+  "progressive_output": "480p and 720p confirmed through the in-game display menu.",
+  "iop_audio": "FREESD and audsrv initialized from the ISO.",
+  "host_checks": "Display geometry and frame clock tests passed. Both edition replays reproduce the prior video, PCM and RAM hashes.",
+  "iso_file_checks": "Boot configuration, boot ELF and both IOP modules verified after ISO extraction.",
+  "physical_ps2_opl": "Pending."
+}
